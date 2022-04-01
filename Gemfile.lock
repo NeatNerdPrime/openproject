@@ -156,6 +156,11 @@ PATH
       costs
 
 PATH
+  remote: modules/storages
+  specs:
+    openproject-storages (1.0.0)
+
+PATH
   remote: modules/team_planner
   specs:
     openproject-team_planner (1.0.0)
@@ -348,7 +353,7 @@ GEM
     commonmarker (0.23.4)
     compare-xml (0.66)
       nokogiri (~> 1.8)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     cookiejar (0.3.3)
     cork (0.3.0)
       colored2 (~> 3.1)
@@ -532,7 +537,7 @@ GEM
     hashdiff (1.0.1)
     hashery (2.1.2)
     hashie (3.6.0)
-    html-pipeline (2.14.0)
+    html-pipeline (2.14.1)
       activesupport (>= 2)
       nokogiri (>= 1.4)
     htmldiff (0.0.1)
@@ -573,7 +578,7 @@ GEM
     launchy (2.5.0)
       addressable (~> 2.7)
     lefthook (0.7.7)
-    letter_opener (1.8.0)
+    letter_opener (1.8.1)
       launchy (>= 2.2, < 3)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -648,8 +653,8 @@ GEM
       webfinger (>= 1.0.1)
     openproject-token (2.2.0)
       activemodel
-    parallel (1.21.0)
-    parallel_tests (3.7.3)
+    parallel (1.22.1)
+    parallel_tests (3.8.1)
       parallel
     parser (3.1.1.0)
       ast (~> 2.4.1)
@@ -702,7 +707,7 @@ GEM
       eventmachine_httpserver
       http_parser.rb (~> 0.6.0)
       multi_json
-    puma (5.6.2)
+    puma (5.6.4)
       nio4r (~> 2.0)
     puma-plugin-statsd (2.1.0)
       puma (>= 5.0, < 6)
@@ -821,7 +826,7 @@ GEM
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
     rspec-support (3.11.0)
-    rubocop (1.26.0)
+    rubocop (1.26.1)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -874,16 +879,16 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic (1.6.1)
-    sentry-delayed_job (5.2.0)
+    sentry-delayed_job (5.2.1)
       delayed_job (>= 4.0)
-      sentry-ruby-core (~> 5.2.0)
-    sentry-rails (5.2.0)
+      sentry-ruby-core (~> 5.2.1)
+    sentry-rails (5.2.1)
       railties (>= 5.0)
-      sentry-ruby-core (~> 5.2.0)
-    sentry-ruby (5.2.0)
+      sentry-ruby-core (~> 5.2.1)
+    sentry-ruby (5.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      sentry-ruby-core (= 5.2.0)
-    sentry-ruby-core (5.2.0)
+      sentry-ruby-core (= 5.2.1)
+    sentry-ruby-core (5.2.1)
       concurrent-ruby
     shoulda-context (2.0.0)
     shoulda-matchers (5.1.0)
@@ -1013,6 +1018,7 @@ DEPENDENCIES
   factory_bot (~> 6.2.0)
   factory_bot_rails (~> 6.2.0)
   faker
+  ffi (~> 1.15)
   flamegraph
   fog-aws
   friendly_id (~> 5.4.0)
@@ -1061,6 +1067,7 @@ DEPENDENCIES
   openproject-pdf_export!
   openproject-recaptcha!
   openproject-reporting!
+  openproject-storages!
   openproject-team_planner!
   openproject-token (~> 2.2.0)
   openproject-two_factor_authentication!
@@ -1131,6 +1138,7 @@ DEPENDENCIES
   timecop (~> 0.9.0)
   typed_dag (~> 2.0.2)
   tzinfo-data (~> 1.2022.1)
+  validate_url
   warden (~> 1.2)
   warden-basic_auth (~> 0.2.1)
   webdrivers (~> 5.0.0)
