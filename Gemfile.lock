@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/citizensadvice/capybara_accessible_selectors
-  revision: 755b3d9b43695aeaae7edb09a24da0e3cda97ee4
+  revision: 347bbe06cb420416855e80bb4e3a3016b2d5872c
   branch: main
   specs:
     capybara_accessible_selectors (0.11.0)
@@ -832,7 +832,7 @@ GEM
       pry (>= 0.12.0)
     psych (5.1.2)
       stringio
-    public_suffix (5.0.4)
+    public_suffix (5.0.5)
     puffing-billy (4.0.0)
       addressable (~> 2.5)
       em-http-request (~> 1.1, >= 1.1.0)
