@@ -873,7 +873,7 @@ GEM
       activerecord (>= 6.1)
       request_store (~> 1.4)
     parallel (1.26.3)
-    parallel_tests (4.9.0)
+    parallel_tests (4.9.1)
       parallel
     parser (3.3.7.1)
       ast (~> 2.4.1)
@@ -1761,7 +1761,7 @@ CHECKSUMS
   ox (2.14.22) sha256=0bbc4a40d109e4b76295c4927b5f2d453070eb5af221e5b05ec0ff58e291c6a9
   paper_trail (16.0.0) sha256=e9b9f0fb1b8b590c8231cfa931b282ba92f90e066e393930a5e1c61ae4c5019d
   parallel (1.26.3) sha256=d86babb7a2b814be9f4b81587bf0b6ce2da7d45969fab24d8ae4bf2bb4d4c7ef
-  parallel_tests (4.9.0) sha256=095063aa56d1f0debcacef907a9a7c0f6b80c4f084c271c378cbfe0481c2335a
+  parallel_tests (4.9.1) sha256=4782bf86edcce774f18f2a0dade29140b61f251b25cccaa0e1b3805dc90a84b5
   parser (3.3.7.1) sha256=7dbe61618025519024ac72402a6677ead02099587a5538e84371b76659e6aca1
   pdf-core (0.9.0) sha256=4f368b2f12b57ec979872d4bf4bd1a67e8648e0c81ab89801431d2fc89f4e0bb
   pdf-inspector (1.3.0) sha256=fc107579d6f29b636e2da3d6743479b2624d9e390bf2d84beef8fd4ebe1a05bd
