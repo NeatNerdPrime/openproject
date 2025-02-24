@@ -726,7 +726,7 @@ GEM
     ladle (1.0.1)
       open4 (~> 1.0)
     language_server-protocol (3.17.0.4)
-    launchy (3.1.0)
+    launchy (3.1.1)
       addressable (~> 2.8)
       childprocess (~> 5.0)
       logger (~> 1.6)
@@ -1670,7 +1670,7 @@ CHECKSUMS
   jwt (2.10.1) sha256=e6424ae1d813f63e761a04d6284e10e7ec531d6f701917fadcd0d9b2deaf1cc5
   ladle (1.0.1) sha256=e8586964108c798d48bf57d2a65bd5602e8e5223a176b6602a0fb36c0bda90dc
   language_server-protocol (3.17.0.4) sha256=c484626478664fd13482d8180947c50a8590484b1258b99b7aedb3b69df89669
-  launchy (3.1.0) sha256=4964ae775cd802f5a57ae5584fbdb1151a8908cb0c626341563430d614a59572
+  launchy (3.1.1) sha256=72b847b5cc961589dde2c395af0108c86ff0119f42d4648d25b5440ebb10059e
   lefthook (1.10.10) sha256=344ddb720cdcc5ffaefabd47784766d931f4294babb9961f75db19d7765feea7
   letter_opener (1.10.0) sha256=2ff33f2e3b5c3c26d1959be54b395c086ca6d44826e8bf41a14ff96fdf1bdbb2
   letter_opener_web (3.0.0) sha256=3f391efe0e8b9b24becfab5537dfb17a5cf5eb532038f947daab58cb4b749860
