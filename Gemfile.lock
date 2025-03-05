@@ -359,8 +359,8 @@ GEM
     awesome_nested_set (3.8.0)
       activerecord (>= 4.0.0, < 8.1)
     aws-eventstream (1.3.1)
-    aws-partitions (1.1052.0)
-    aws-sdk-core (3.219.0)
+    aws-partitions (1.1060.0)
+    aws-sdk-core (3.220.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
@@ -1513,8 +1513,8 @@ CHECKSUMS
   auto_strip_attributes (2.6.0) sha256=a7e2e0cf744de2bcd947fd68014220702bcc88c81274c1cd9ce6f7316aae39b0
   awesome_nested_set (3.8.0) sha256=469daff411d80291dbb80d1973133e498048a7afc2519c545f62d2cdebc60eda
   aws-eventstream (1.3.1) sha256=4465b2add71d69a36fb1268a738d9b3d1a593c789e0286f28fad38e132d4403b
-  aws-partitions (1.1052.0) sha256=4dfe9876211c11433cab7fbb3e693c1837f8a89aaf634678f82d5431b2d7c829
-  aws-sdk-core (3.219.0) sha256=d10c3832ece1f1de8edb7cbbcd737dd49b2789fae8744537943e86fdd822c649
+  aws-partitions (1.1060.0) sha256=86defc10dbab8e116805a0f47e54a3ea2e6a3245ef8321bd77ffc981fbfcad4b
+  aws-sdk-core (3.220.0) sha256=2d5b38c7ddfa77ba5307ca589aaeef6739f5a5f3942f50236df444879a3aa979
   aws-sdk-kms (1.99.0) sha256=ba292fc3ffd672532aae2601fe55ff424eee78da8e23c23ba6ce4037138275a8
   aws-sdk-s3 (1.182.0) sha256=d0fc3579395cb6cb69bf6e975240ce031fc673190e74c8dddbdd6c18572b450d
   aws-sdk-sns (1.94.0) sha256=6cf0b27e045a5021c6a8925957e389d0bd570cca2485f33b50745caa4fd1f06d
