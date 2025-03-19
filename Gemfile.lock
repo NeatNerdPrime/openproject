@@ -637,10 +637,11 @@ GEM
       retriable (>= 2.0, < 4.a)
     google-apis-gmail_v1 (0.41.0)
       google-apis-core (>= 0.15.0, < 2.a)
-    google-cloud-env (2.2.1)
+    google-cloud-env (2.2.2)
+      base64 (~> 0.2)
       faraday (>= 1.0, < 3.a)
     google-logging-utils (0.1.0)
-    googleauth (1.13.1)
+    googleauth (1.14.0)
       faraday (>= 1.0, < 3.a)
       google-cloud-env (~> 2.2)
       google-logging-utils (~> 0.1)
@@ -1640,9 +1641,9 @@ CHECKSUMS
   good_job (3.99.1) sha256=7d3869d8a8ee8ef7048fee5d746f41c21987b7822c20038a2f773036bef0830a
   google-apis-core (0.16.0) sha256=046a2c30a5ec123b2a6bc5e64348be781ce5fcd18dd4e85982e7a6a8da9d0dcc
   google-apis-gmail_v1 (0.41.0) sha256=d09102619a571213e9637efb9ca4504c54d7779b524344045e24088eb2d0f8d0
-  google-cloud-env (2.2.1) sha256=3c6062aee0b5c863b83f3ce125ea7831507aadf1af7c0d384b74a116c4f649cf
+  google-cloud-env (2.2.2) sha256=94bed40e05a67e9468ce1cb38389fba9a90aa8fc62fc9e173204c1dca59e21e7
   google-logging-utils (0.1.0) sha256=70950b1e49314273cf2e167adb47b62af7917a4691b580da7e9be67b9205fcd5
-  googleauth (1.13.1) sha256=33448ce662e40afeb3e6db5eb9f4ee712467b1701f3857ef9c0aecac8447eca0
+  googleauth (1.14.0) sha256=62e7de11791890c3d3dc70582dfd9ab5516530e4e4f56d96451fd62c76475149
   grape (2.3.0) sha256=99484ae2907b06a9e109edf2911c383809bf7f7c00d65554e4d01f0388728bda
   grape_logging (1.8.4) sha256=efcc3e322dbd5d620a68f078733b7db043cf12680144cd03c982f14115c792d1
   gravatar_image_tag (1.2.0) sha256=eb5630fea846b711e713b934a0178fb9785f02f4eb9ced8d6faa4d537c40fdcf
