@@ -1009,7 +1009,7 @@ GEM
       msgpack (>= 0.4.3)
       optimist (>= 3.0.0)
     rbtree3 (0.7.1)
-    rdoc (6.12.0)
+    rdoc (6.13.0)
       psych (>= 4.0.0)
     recaptcha (5.19.0)
     redcarpet (3.6.1)
@@ -1817,7 +1817,7 @@ CHECKSUMS
   rb_sys (0.9.111) sha256=65822fd8d57c248cd893db0efe01bc6edc15fcbea3ba6666091e35430c1cbaf0
   rbtrace (0.5.1) sha256=e8cba64d462bfb8ba102d7be2ecaacc789247d52ac587d8003549d909cb9c5dc
   rbtree3 (0.7.1) sha256=ab60ead728a5491b70df4f4065e180b18dbab5319f817ce1dbf5dd906f26d8ba
-  rdoc (6.12.0) sha256=7d6f706e070bffa5d18a448f24076cbfb34923a99c1eab842aa18e6ca69f56e0
+  rdoc (6.13.0) sha256=32c2139ae43ed91b7c43032fe5423d21d57718829cc5a11e5c9710d2aa5e0329
   recaptcha (5.19.0) sha256=b69c021a5b788da06901d2c95ab86f10a8634e6496343096cc5167f0318b2a39
   redcarpet (3.6.1) sha256=d444910e6aa55480c6bcdc0cdb057626e8a32c054c29e793fa642ba2f155f445
   redis (5.4.0) sha256=798900d869418a9fc3977f916578375b45c38247a556b61d58cba6bb02f7d06b
