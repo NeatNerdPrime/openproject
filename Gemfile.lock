@@ -566,7 +566,7 @@ GEM
     factory_bot_rails (6.4.4)
       factory_bot (~> 6.5)
       railties (>= 5.0.0)
-    faraday (2.12.2)
+    faraday (2.13.0)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -636,7 +636,7 @@ GEM
       mutex_m
       representable (~> 3.0)
       retriable (>= 2.0, < 4.a)
-    google-apis-gmail_v1 (0.41.0)
+    google-apis-gmail_v1 (0.42.0)
       google-apis-core (>= 0.15.0, < 2.a)
     google-cloud-env (2.2.2)
       base64 (~> 0.2)
@@ -1613,7 +1613,7 @@ CHECKSUMS
   excon (1.2.5) sha256=ca040bb61bc0059968f34a17115a00d2db8562e3c0c5c5c7432072b551c85a9d
   factory_bot (6.5.1) sha256=40581ea7bec0aee05514b8f4f99ed477274bdf1884c1372de5209e60322d6ca9
   factory_bot_rails (6.4.4) sha256=139e17caa2c50f098fddf5e5e1f29e8067352024e91ca1186d018b36589e5c88
-  faraday (2.12.2) sha256=157339c25c7b8bcb739f5cf1207cb0cefe8fa1c65027266bcbc34c90c84b9ad6
+  faraday (2.13.0) sha256=f2697cd61a434dc446ee035f0370de654c2ad64707c4fc2541eb2338702e9614
   faraday-follow_redirects (0.3.0) sha256=d92d975635e2c7fe525dd494fcd4b9bb7f0a4a0ec0d5f4c15c729530fdb807f9
   faraday-net_http (3.4.0) sha256=a1f1e4cd6a2cf21599c8221595e27582d9936819977bbd4089a601f24c64e54a
   fastimage (2.3.1) sha256=23c629f1f3e7d61bcfcc06c25b3d2418bc6bf41d2e615dbf5132c0e3b63ecce9
@@ -1644,7 +1644,7 @@ CHECKSUMS
   gon (6.4.0) sha256=e3a618d659392890f1aa7db420f17c75fd7d35aeb5f8fe003697d02c4b88d2f0
   good_job (3.99.1) sha256=7d3869d8a8ee8ef7048fee5d746f41c21987b7822c20038a2f773036bef0830a
   google-apis-core (0.16.0) sha256=046a2c30a5ec123b2a6bc5e64348be781ce5fcd18dd4e85982e7a6a8da9d0dcc
-  google-apis-gmail_v1 (0.41.0) sha256=d09102619a571213e9637efb9ca4504c54d7779b524344045e24088eb2d0f8d0
+  google-apis-gmail_v1 (0.42.0) sha256=74b26b486fdb5f3212f54d1c24e98043be912079572729135473500c2f478cd5
   google-cloud-env (2.2.2) sha256=94bed40e05a67e9468ce1cb38389fba9a90aa8fc62fc9e173204c1dca59e21e7
   google-logging-utils (0.1.0) sha256=70950b1e49314273cf2e167adb47b62af7917a4691b580da7e9be67b9205fcd5
   googleauth (1.14.0) sha256=62e7de11791890c3d3dc70582dfd9ab5516530e4e4f56d96451fd62c76475149
