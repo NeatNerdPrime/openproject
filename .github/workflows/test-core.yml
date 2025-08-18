@@ -34,7 +34,7 @@ jobs:
     - uses: runs-on/action@v2
       with:
         metrics: cpu,memory,disk,io,network
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Cache DOCKER
       id: cache_docker
       uses: runs-on/cache@v4
