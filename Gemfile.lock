@@ -856,10 +856,10 @@ GEM
       validate_email
       validate_url
       webfinger (~> 2.0)
-    openproject-octicons (19.27.0)
-    openproject-octicons_helper (19.27.0)
+    openproject-octicons (19.27.1)
+    openproject-octicons_helper (19.27.1)
       actionview
-      openproject-octicons (= 19.27.0)
+      openproject-octicons (= 19.27.1)
       railties
     openproject-primer_view_components (0.71.0)
       actionview (>= 7.1.0)
@@ -1816,8 +1816,8 @@ CHECKSUMS
   openproject-job_status (1.0.0)
   openproject-ldap_groups (1.0.0)
   openproject-meeting (1.0.0)
-  openproject-octicons (19.27.0) sha256=9e375f62a2880f18080bd07f9c932e63011c773b24f3853704e8b60be179599c
-  openproject-octicons_helper (19.27.0) sha256=fcd870981ecd72685abfea69705d144e51acb9f80e33f774c3bd231bebb22ef3
+  openproject-octicons (19.27.1) sha256=80a39bd06f50196eb39c532a0d8de72a5b5100d201eeb50d871c81787a638424
+  openproject-octicons_helper (19.27.1) sha256=88fc2a286037794c66b5edd0fce316f75270ff0fab4e2723a109406c3ee19cab
   openproject-openid_connect (1.0.0)
   openproject-primer_view_components (0.71.0) sha256=e75c6325c1bd2e5f88110e3831eb8d23a7f19353cfb4da4062021b50478b8293
   openproject-recaptcha (1.0.0)
