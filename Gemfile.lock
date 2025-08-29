@@ -861,11 +861,11 @@ GEM
       actionview
       openproject-octicons (= 19.27.1)
       railties
-    openproject-primer_view_components (0.71.0)
-      actionview (>= 7.1.0)
-      activesupport (>= 7.1.0)
+    openproject-primer_view_components (0.72.0)
+      actionview (>= 7.2.0)
+      activesupport (>= 7.2.0)
       openproject-octicons (>= 19.25.0)
-      view_component (>= 3.1, < 4.0)
+      view_component (>= 3.1, < 5.0)
     openproject-token (7.3.0)
       activemodel
     openssl (3.3.0)
@@ -1256,10 +1256,9 @@ GEM
     vcr (6.3.1)
       base64
     vernier (1.8.0)
-    view_component (3.23.2)
-      activesupport (>= 5.2.0, < 8.1)
+    view_component (4.0.2)
+      activesupport (>= 7.1.0, < 8.1)
       concurrent-ruby (~> 1)
-      method_source (~> 1.0)
     virtus (2.0.0)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -1819,7 +1818,7 @@ CHECKSUMS
   openproject-octicons (19.27.1) sha256=80a39bd06f50196eb39c532a0d8de72a5b5100d201eeb50d871c81787a638424
   openproject-octicons_helper (19.27.1) sha256=88fc2a286037794c66b5edd0fce316f75270ff0fab4e2723a109406c3ee19cab
   openproject-openid_connect (1.0.0)
-  openproject-primer_view_components (0.71.0) sha256=e75c6325c1bd2e5f88110e3831eb8d23a7f19353cfb4da4062021b50478b8293
+  openproject-primer_view_components (0.72.0) sha256=ced12b6c420fea6c02a4540b2c759a32b17e7b677eab29543c4f4eeec3db9543
   openproject-recaptcha (1.0.0)
   openproject-reporting (1.0.0)
   openproject-storages (1.0.0)
@@ -1987,7 +1986,7 @@ CHECKSUMS
   validate_url (1.0.15) sha256=72fe164c0713d63a9970bd6700bea948babbfbdcec392f2342b6704042f57451
   vcr (6.3.1) sha256=37b56e157e720446a3f4d2d39919cabef8cb7b6c45936acffd2ef8229fec03ed
   vernier (1.8.0) sha256=c6cf9555c2a58affc25ebc45de0b4d45a993eb078f88f14f5b45d7bacb25acdd
-  view_component (3.23.2) sha256=3c2fed4b9e38bf074fa3d42ca55eedbb2cc070e0f3c31d7c13a50b0db530892b
+  view_component (4.0.2) sha256=80eb4a8ecf8ff4cf152aea4821a8748d071a2e3af04f0532efcbf5011e8e9f65
   virtus (2.0.0) sha256=8841dae4eb7fcc097320ba5ea516bf1839e5d056c61ee27138aa4bddd6e3d1c2
   warden (1.2.9) sha256=46684f885d35a69dbb883deabf85a222c8e427a957804719e143005df7a1efd0
   warden-basic_auth (0.2.1) sha256=bfc752e0109c0182c3e69e930284c5e1e81e7b4a354aeb2b5914ead1391f3c6e
