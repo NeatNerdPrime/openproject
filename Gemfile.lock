@@ -672,7 +672,7 @@ GEM
     htmlentities (4.3.4)
     http-2 (1.1.1)
     http_parser.rb (0.8.0)
-    httpx (1.3.4)
+    httpx (1.6.0)
       http-2 (>= 1.0.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
@@ -1399,7 +1399,7 @@ DEPENDENCIES
   grids!
   html-pipeline (~> 2.14.0)
   htmldiff
-  httpx (~> 1.3.4)
+  httpx (~> 1.6.0)
   i18n-js (~> 4.2.3)
   i18n-tasks (~> 1.0.13)
   ice_cube (~> 0.17.0)
@@ -1721,7 +1721,7 @@ CHECKSUMS
   htmlentities (4.3.4) sha256=125a73c6c9f2d1b62100b7c3c401e3624441b663762afa7fe428476435a673da
   http-2 (1.1.1) sha256=1141a5a03c2f4e6b8d2fa62394de581e1ff6387711cd7ed577212e9d95562bba
   http_parser.rb (0.8.0) sha256=5a0932f1fa82ce08a8516a2685d5a86031c000560f89946913c555a0697544be
-  httpx (1.3.4) sha256=d90bac25b909184479af1bd95e66b0a336a11d76076342caae5809ffd7d63799
+  httpx (1.6.0) sha256=c1639bced962b8788eb2b11f9c6f845fb1b88b80c9e2adf4b1b96d49f5b803e9
   i18n (1.14.7) sha256=ceba573f8138ff2c0915427f1fc5bdf4aa3ab8ae88c8ce255eb3ecf0a11a5d0f
   i18n-js (4.2.3) sha256=ffb1a6d34afebd9ab2aff9bd86e8f2873191cbe8b9ac5c2c8efe4dfa1107ca3b
   i18n-tasks (1.0.15) sha256=74f3e9e0e2db5d757c58e659f4269ee698c7a7532ed29066a2aaffc9efbdfb56
