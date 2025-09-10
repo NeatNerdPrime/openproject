@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "CHANGELOG.md", "README.rdoc"]
 
-  s.add_dependency "messagebird-rest", "~> 1.4.2"
+  s.add_dependency "messagebird-rest", ">= 1.4.2", "< 5.1.0"
   s.add_dependency "rotp", "~> 6.1"
   s.add_dependency "webauthn", "~> 3.0"
 

@@ -204,7 +204,7 @@ PATH
   specs:
     openproject-two_factor_authentication (1.0.0)
       aws-sdk-sns (>= 1.101, < 1.107)
-      messagebird-rest (~> 1.4.2)
+      messagebird-rest (>= 1.4.2, < 5.1.0)
       rotp (~> 6.1)
       webauthn (~> 3.0)
 
@@ -771,7 +771,8 @@ GEM
     marcel (1.0.4)
     markly (0.13.1)
     matrix (0.4.3)
-    messagebird-rest (1.4.2)
+    messagebird-rest (5.0.0)
+      jwt (< 4)
     meta-tags (2.22.1)
       actionpack (>= 6.0.0, < 8.1)
     method_source (1.1.0)
@@ -1753,7 +1754,7 @@ CHECKSUMS
   markly (0.13.1) sha256=01317a045fe89032732a520e71593deeb62187562ca82effa0ed3ea23b5fd46a
   matrix (0.4.3) sha256=a0d5ab7ddcc1973ff690ab361b67f359acbb16958d1dc072b8b956a286564c5b
   md_to_pdf (0.2.5)
-  messagebird-rest (1.4.2) sha256=1501e16ad76c87558f20f3b26cb39d05f587b349b44b8bf8056b040e9b495301
+  messagebird-rest (5.0.0) sha256=da4cc1efba3d5e4aa021fad07426c2cb6b326ce5670da5104bb8f6056a39d59c
   meta-tags (2.22.1) sha256=e5ae1febbd320d396c7226d7edb868e5d63466c14b9c8b06622a1a74e6dce354
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
   mime-types (3.7.0) sha256=dcebf61c246f08e15a4de34e386ebe8233791e868564a470c3fe77c00eed5e56
