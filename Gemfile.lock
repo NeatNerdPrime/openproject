@@ -329,7 +329,7 @@ GEM
     android_key_attestation (0.3.0)
     anyway_config (2.7.2)
       ruby-next-core (~> 1.0)
-    appsignal (4.7.0)
+    appsignal (4.7.1)
       logger
       rack (>= 2.0.0)
     ast (2.4.3)
@@ -1592,7 +1592,7 @@ DEPENDENCIES
   acts_as_tree (~> 2.9.0)
   addressable (~> 2.8.0)
   airbrake (~> 13.0.0)
-  appsignal (~> 4.2)
+  appsignal (~> 4.7)
   auto_strip_attributes (~> 2.5)
   awesome_nested_set (~> 3.8.0)
   aws-sdk-core (~> 3.107)
@@ -1825,7 +1825,7 @@ CHECKSUMS
   airbrake-ruby (6.2.2) sha256=293e34fb36e763e1b6d67ab584cce7c5b6fe9eea1a70c26d8c13c0f5d7de2fbc
   android_key_attestation (0.3.0) sha256=467eb01a99d2bb48ef9cf24cc13712669d7056cba5a52d009554ff037560570b
   anyway_config (2.7.2) sha256=30f6b087c0b41afdd43fe46c81d65a16f052a8489dab453abaeb4ea67aa74bad
-  appsignal (4.7.0) sha256=9037199709e91aa0315c9c3d7f6ad5a6417922c0d60cdd3b587bce98612500af
+  appsignal (4.7.1) sha256=6b9f786729a9bf3db3a91836ff5d192f483ed87bc93d704b1d1af9b074fc70d8
   ast (2.4.3) sha256=954615157c1d6a382bc27d690d973195e79db7f55e9765ac7c481c60bdb4d383
   attr_required (1.0.2) sha256=f0ebfc56b35e874f4d0ae799066dbc1f81efefe2364ca3803dc9ea6a4de6cb99
   auto_strip_attributes (2.6.0) sha256=a7e2e0cf744de2bcd947fd68014220702bcc88c81274c1cd9ce6f7316aae39b0
