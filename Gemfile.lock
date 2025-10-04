@@ -404,11 +404,14 @@ GEM
     capybara-screenshot (1.0.26)
       capybara (>= 1.0, < 4)
       launchy
-    carrierwave (1.3.4)
-      activemodel (>= 4.0.0)
-      activesupport (>= 4.0.0)
-      mime-types (>= 1.16)
-      ssrf_filter (~> 1.0, < 1.1.0)
+    carrierwave (2.2.0)
+      activemodel (>= 5.0.0)
+      activesupport (>= 5.0.0)
+      addressable (~> 2.6)
+      image_processing (~> 1.1)
+      mimemagic (>= 0.3.0)
+      mini_mime (>= 0.1.3)
+      ssrf_filter (~> 1.0)
     carrierwave_direct (2.1.0)
       carrierwave (>= 1.0.0)
       fog-aws
@@ -719,6 +722,9 @@ GEM
       ostruct
     ice_cube (0.17.0)
     ice_nine (0.11.2)
+    image_processing (1.14.0)
+      mini_magick (>= 4.9.5, < 6)
+      ruby-vips (>= 2.0.17, < 3)
     interception (0.5)
     io-console (0.8.1)
     irb (1.15.2)
@@ -807,7 +813,10 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0902)
+    mime-types-data (3.2025.0924)
+    mimemagic (0.4.3)
+      nokogiri (~> 1)
+      rake
     mini_magick (5.3.1)
       logger
     mini_mime (1.1.5)
@@ -1351,6 +1360,9 @@ GEM
     ruby-saml (1.18.1)
       nokogiri (>= 1.13.10)
       rexml
+    ruby-vips (2.2.5)
+      ffi (~> 1.12)
+      logger
     ruby2_keywords (0.0.5)
     rubytree (2.1.1)
       json (~> 2.0, > 2.9)
@@ -1399,7 +1411,7 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    ssrf_filter (1.0.8)
+    ssrf_filter (1.3.0)
     stackprof (0.2.27)
     store_attribute (2.0.1)
       activerecord (>= 6.1)
@@ -1556,7 +1568,7 @@ DEPENDENCIES
   capybara (~> 3.40.0)
   capybara-screenshot (~> 1.0.17)
   capybara_accessible_selectors!
-  carrierwave (~> 1.3.4)
+  carrierwave (~> 2.2.0)
   carrierwave_direct (~> 2.1.0)
   climate_control
   closure_tree (~> 9.1.1)
@@ -1804,7 +1816,7 @@ CHECKSUMS
   capybara (3.40.0) sha256=42dba720578ea1ca65fd7a41d163dd368502c191804558f6e0f71b391054aeef
   capybara-screenshot (1.0.26) sha256=816b9370a07752097c82a05f568aaf5d3b7f45c3db5d3aab2014071e1b3c0c77
   capybara_accessible_selectors (0.14.0)
-  carrierwave (1.3.4) sha256=81772dabd1830edbd7f4526d2ae2c79f974f1d48900c3f03f7ecb7c657463a21
+  carrierwave (2.2.0) sha256=ada48a22ff33ef091d61650d717f0962ef7b0e2371193801c4d4d358d836218a
   carrierwave_direct (2.1.0) sha256=b0d5c19c1d17a05940e488cff644a3b2946422d6d494b2174b48f6a90c5dddbf
   cbor (0.5.10.1) sha256=79cdf79f18dcd9ee97e0b849c6d573e5a2e3ddc1954d180f384d6ed2612b6df0
   cgi (0.5.0) sha256=fe99f65bb2c146e294372ebb27602adbc3b4c008e9ea7038c6bd48c1ec9759da
@@ -1939,6 +1951,7 @@ CHECKSUMS
   icalendar (2.12.0) sha256=331cc3ca2243bd43f38f81658f53c03bea1e7584375561373824758363e4fff5
   ice_cube (0.17.0) sha256=32deb45dda4b4acc53505c2f581f6d32b5afc04d29b9004769944a0df5a5fcbe
   ice_nine (0.11.2) sha256=5d506a7d2723d5592dc121b9928e4931742730131f22a1a37649df1c1e2e63db
+  image_processing (1.14.0) sha256=754cc169c9c262980889bec6bfd325ed1dafad34f85242b5a07b60af004742fb
   interception (0.5) sha256=a53818d636752a8df90d8c1bb2f7b6e13a7b828543cb02b50fbde98b849d7907
   io-console (0.8.1) sha256=1e15440a6b2f67b6ea496df7c474ed62c860ad11237f29b3bd187f054b925fcb
   irb (1.15.2) sha256=222f32952e278da34b58ffe45e8634bf4afc2dc7aa9da23fed67e581aa50fdba
@@ -1972,7 +1985,8 @@ CHECKSUMS
   meta-tags (2.22.1) sha256=e5ae1febbd320d396c7226d7edb868e5d63466c14b9c8b06622a1a74e6dce354
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
   mime-types (3.7.0) sha256=dcebf61c246f08e15a4de34e386ebe8233791e868564a470c3fe77c00eed5e56
-  mime-types-data (3.2025.0902) sha256=5d8397fb76c075b483bed1d5ec64426d80aa6cd2133f3c0dc1dbb93aa85b1e1a
+  mime-types-data (3.2025.0924) sha256=f276bca15e59f35767cbcf2bc10e023e9200b30bd6a572c1daf7f4cc24994728
+  mimemagic (0.4.3) sha256=08ac2d41e2d7cd967b00843dea8c189f91939e3f47732204944908f1ab7ecc9f
   mini_magick (5.3.1) sha256=29395dfd76badcabb6403ee5aff6f681e867074f8f28ce08d78661e9e4a351c4
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
   mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
@@ -2198,6 +2212,7 @@ CHECKSUMS
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   ruby-rc4 (0.1.5) sha256=00cc40a39d20b53f5459e7ea006a92cf584e9bc275e2a6f7aa1515510e896c03
   ruby-saml (1.18.1) sha256=1b0e7a44aef150b4197955f5e015d593672e242cfdc5d06aa7554ec2350b9107
+  ruby-vips (2.2.5) sha256=f3c547a172c36ba26b8614c809f5823bc6199623ec6204ec7c3bce29037f7758
   ruby2_keywords (0.0.5) sha256=ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef
   rubytree (2.1.1) sha256=4925016356a81730e982f1f8c3b5f8da461f18906c77d238bad4c4ba896abd41
   rubyzip (2.4.1) sha256=8577c88edc1fde8935eb91064c5cb1aef9ad5494b940cf19c775ee833e075615
@@ -2219,7 +2234,7 @@ CHECKSUMS
   spring-commands-rubocop (0.4.0) sha256=3e677a2c8a27ae8a986f04bfb69e66d5d55b017541e8be93bf0dc48a7f5690c1
   sprockets (3.7.5) sha256=72c20f256548f8a37fe7db41d96be86c3262fddaf4ebe9d69ec8317394fed383
   sprockets-rails (3.5.2) sha256=a9e88e6ce9f8c912d349aa5401509165ec42326baf9e942a85de4b76dbc4119e
-  ssrf_filter (1.0.8) sha256=03f49f54837e407d43ee93ec733a8a94dc1bcf8185647ac61606e63aaedaa0db
+  ssrf_filter (1.3.0) sha256=66882d7de7d09c019098d6d7372412950ae184ebbc7c51478002058307aba6f2
   stackprof (0.2.27) sha256=aff6d28656c852e74cf632cc2046f849033dc1dedffe7cb8c030d61b5745e80c
   store_attribute (2.0.1) sha256=643655e4800655b58379e8b01bd524f5586093a9d88698483ac8762cda25b5ab
   stringex (2.8.6) sha256=c7b382d2b2a47a1e1646f256df201c48d487d6296fbb289d76802f67f5e929c4
