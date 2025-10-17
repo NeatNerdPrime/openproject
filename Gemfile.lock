@@ -339,7 +339,7 @@ GEM
     awesome_nested_set (3.8.0)
       activerecord (>= 4.0.0, < 8.1)
     aws-eventstream (1.4.0)
-    aws-partitions (1.1165.0)
+    aws-partitions (1.1173.0)
     aws-sdk-core (3.233.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
@@ -348,10 +348,10 @@ GEM
       bigdecimal
       jmespath (~> 1, >= 1.6.1)
       logger
-    aws-sdk-kms (1.113.0)
+    aws-sdk-kms (1.114.0)
       aws-sdk-core (~> 3, >= 3.231.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.199.1)
+    aws-sdk-s3 (1.200.0)
       aws-sdk-core (~> 3, >= 3.231.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.5)
@@ -1549,7 +1549,7 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.5)
   awesome_nested_set (~> 3.8.0)
   aws-sdk-core (~> 3.233)
-  aws-sdk-s3 (~> 1.199)
+  aws-sdk-s3 (~> 1.200)
   axe-core-rspec
   bcrypt (~> 3.1.6)
   bootsnap (~> 1.18.0)
@@ -1785,10 +1785,10 @@ CHECKSUMS
   auto_strip_attributes (2.6.0) sha256=a7e2e0cf744de2bcd947fd68014220702bcc88c81274c1cd9ce6f7316aae39b0
   awesome_nested_set (3.8.0) sha256=469daff411d80291dbb80d1973133e498048a7afc2519c545f62d2cdebc60eda
   aws-eventstream (1.4.0) sha256=116bf85c436200d1060811e6f5d2d40c88f65448f2125bc77ffce5121e6e183b
-  aws-partitions (1.1165.0) sha256=e7e6d067094d3b5b30a52614913d031565c2f79ffef7de85d56e90eae9eca9b6
+  aws-partitions (1.1173.0) sha256=28a04a9eadd13f67bee4d87f23247d706d18aa517d2e3a597c876a4dd1e7c473
   aws-sdk-core (3.233.0) sha256=798db4e867d15dceb6504317867fc8013042984988199600c78e310d0058018a
-  aws-sdk-kms (1.113.0) sha256=deb1d129c3cc9785c7ad2e625926c6286334fce65a0813f6d61dc24c9dda6929
-  aws-sdk-s3 (1.199.1) sha256=a36aba0e3a408e5c0822fff3be76676ec7e91e2c78cfb92db33c96596ecbcac6
+  aws-sdk-kms (1.114.0) sha256=3d31fe329140fa0934e06712b1ce16be1117c0b6a2c33dc240fdfebab2cbba0c
+  aws-sdk-s3 (1.200.0) sha256=9671380118290f3b7e7bfeef59145649d7c88c0991936d772578aa3da83c0efc
   aws-sdk-sns (1.106.0) sha256=f2630d40d11489d6f61eddf5f226cd4c0948039e25bfd7dee4f66723529e5cf4
   aws-sigv4 (1.12.1) sha256=6973ff95cb0fd0dc58ba26e90e9510a2219525d07620c8babeb70ef831826c00
   axe-core-api (4.10.3) sha256=6e10f3ed1c031804f16e8154d9d5dc658564d10850cee860e125fe665c3f0148
