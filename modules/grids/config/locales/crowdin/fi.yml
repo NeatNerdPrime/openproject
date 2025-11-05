@@ -7,9 +7,13 @@ fi:
         no_results: "There are no visible children."
         view_all_subitems: "View all subitems"
       members:
-        title: "Latest members"
+        title: "Members"
         no_results: "Ei nähtävissä olevia jäseniä."
         view_all_members: "Näytä kaikki jäsenet"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Ei mitään uutta raportoitavaksi."
   activerecord:

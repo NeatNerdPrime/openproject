@@ -7,9 +7,13 @@ pt-PT:
         no_results: "Não há filhos visíveis."
         view_all_subitems: "Ver todos os sub-elemntos"
       members:
-        title: "Membros mais recentes"
+        title: "Members"
         no_results: "Nenhum membro visível."
         view_all_members: "Ver todos os membros"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Nada de novo no relatório."
   activerecord:

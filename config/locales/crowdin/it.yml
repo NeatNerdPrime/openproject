@@ -303,7 +303,7 @@ it:
         placeholder:
           label: "Etichetta elemento"
           short: "Abbreviazione"
-          score: "Punteggio"
+          weight: "Weight"
       notice:
         remember_items_and_projects: "Ricorda di impostare elementi e progetti nelle rispettive schede per questo campo personalizzato."
       hierarchy:
@@ -322,8 +322,8 @@ it:
     placeholder_version_select: "Prima è necessario selezionare la macro-attività o il progetto"
     calculated_field_not_editable: "Attributo non modificabile. Questo valore viene calcolato automaticamente."
     instructions:
-      is_required: "Contrassegna il campo personalizzato come obbligatorio. Ciò renderà obbligatorio compilare il campo durante la creazione di nuove risorse o l'aggiornamento di risorse esistenti."
-      is_required_for_project: "Spunta la casella per abilitare questo attributo e renderlo necessario in tutti i progetti. Non può essere disattivato per i singoli progetti."
+      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources. Existing resources will not require a value when being updated."
+      is_required_for_project: "Check to enable this attribute and make it required in all projects. It cannot be deactived for individual projects. Existing projects will not require a value when being updated."
       is_for_all: "Contrassegna il campo personalizzato come disponibile in tutti i progetti esistenti e nuovi."
       multi_select: "Consente all'utente di assegnare più valori a questo campo personalizzato."
       searchable: "Includi i valori dei campi quando si utilizza la funzionalità di ricerca globale."
@@ -338,12 +338,12 @@ it:
       no_results_content_text: Crea un nuovo campo personalizzato
   calculated_values:
     error_dialog:
-      title: "Errore con il valore calcolato"
+      title: "Error with Calculated value"
     errors:
-      unknown: "Si è verificato un errore sconosciuto. Controlla la formula per questo valore calcolato."
-      mathematical: "Si è verificato un errore matematico durante il calcolo."
-      missing_value: L'attributo "%{custom_field_name}" è richiesto da questo Valore Calcolato ma è vuoto.
-      disabled_value: L'attributo "%{custom_field_name}" è richiesto da questo Valore Calcolato ma è disabilitato per il progetto.
+      unknown: "An unknown error occurred. Please review the formula for this Calculated value."
+      mathematical: "The mathematical formula leads to an error. Please review the project calculation attribute and try again."
+      missing_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is empty.
+      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is disabled for the project.
   concatenation:
     single: "oppure"
   danger_dialog:
@@ -389,7 +389,7 @@ it:
       depth: "Profondità"
       item: "Elemento"
       label: "Etichetta"
-      score: "Punteggio"
+      weight: "Weight"
       short: "Abbreviazione"
       parent: "Genitore"
       blueprint: "Schema del modello"
@@ -1379,8 +1379,6 @@ it:
         inclusion: "non è impostata su uno dei valori consentiti."
         inclusion_nested: "non è impostato su uno dei valori consentiti al percorso '%{path}'."
         invalid: "non è valido."
-        invalid_characters: "contiene caratteri non validi."
-        not_allowed_custom_fields_referenced: "contiene campi personalizzati che non sono consentiti: %{custom_fields}."
         invalid_url: "non è un URL valido."
         invalid_url_scheme: "non è un protocollo supportato (ammessi: %{allowed_schemes})."
         less_than_or_equal_to: "deve essere inferiore o uguale a %{count}."
@@ -1438,6 +1436,13 @@ it:
           referenced_in_other_fields_html:
             one: "%{name} viene utilizzato nel calcolo degli attributi del progetto %{links}."
             other: "%{name} viene utilizzato nei calcoli degli attributi del progetto: %{links}."
+          attributes:
+            formula:
+              blank: "Formula can't be blank."
+              invalid: "Formula is invalid."
+              invalid_characters: "Only numeric values, mathematical operators and project attributes of type integer, float, calculated value and weighted list are allowed."
+              not_allowed_custom_fields_referenced: "The attribute %{custom_fields} cannot be used because it leads to a circular reference; one attribute depends on the other."
+              format: "%{message}"
         custom_fields_project:
           attributes:
             project_ids:
@@ -2261,11 +2266,11 @@ it:
     features:
       baseline_comparison: Confronti della base di riferimento
       board_view: Schede avanzate
-      calculated_values: Valori calcolati
+      calculated_values: Calculated values
       conditional_highlighting: Evidenziazione condizionale
       internal_comments: Commenti interni
       custom_actions: Azioni personalizzate
-      custom_field_hierarchies: Campi personalizzati di tipo gerarchia
+      custom_field_hierarchies: Hierarchies
       customize_life_cycle: Personalizza il ciclo di vita
       date_alerts: Avvisi di data
       define_custom_style: Tema e logo personalizzati
@@ -2281,6 +2286,7 @@ it:
       sso_auth_providers: Single Sign-On
       team_planner_view: Vista del Pianificatore di team
       virus_scanning: Scansione antivirus
+      weighted_item_lists: Weighted item lists
       work_package_query_relation_columns: Colonne di relazione delle query della macro-attività
       work_package_sharing: Condividi macro-attività con utenti esterni
       work_package_subject_generation: Generazione oggetto di macro-attività
@@ -2327,15 +2333,17 @@ it:
       readonly_work_packages:
         description: "Contrassegna le macro-attività come in sola lettura per stati specifici."
       custom_field_hierarchies:
-        description: "I campi personalizzati gerarchici consentono di organizzare strutture gerarchiche di macro-attività utilizzando elenchi di selezione multilivello."
+        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages and projects by making use of multi-level select lists."
       date_alerts:
         description: "Con gli avvisi sulle date, sarai avvisato delle prossime date di inizio o di fine in modo da non perdere mai o dimenticare una scadenza importante."
+      weighted_item_lists:
+        description: "Weighted item lists allow you to create a list with underlying numeric values associated."
       work_package_sharing:
         description: "Condividi macro-attività con utenti che non sono membri del progetto."
       project_list_sharing:
         description: "Condividi gli elenchi dei progetti con singoli utenti."
       calculated_values:
-        description: "I Valori Calcolati consentono di creare un attributo basato su una formula matematica che utilizza valori numerici, altri attributi di progetto e campi personalizzati."
+        description: "Calculated values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
       define_custom_style:
         title: "Tema e logo a colori personalizzati"
         more_info: "Nota: il logo utilizzato sarà accessibile al pubblico."
@@ -2891,7 +2899,7 @@ it:
   label_select_main_menu_item: Seleziona una nuova voce del menu principale
   label_required_disk_storage: "Spazio disco richiesto"
   label_send_invitation: Invia invito
-  label_calculated_value: "Valore Calcolato"
+  label_calculated_value: "Calculated value"
   label_change_parent: "Cambia genitore"
   label_change_plural: "Modifiche"
   label_change_properties: "Cambia proprietà"
@@ -3073,7 +3081,7 @@ it:
   label_invite_user: "Invita utente"
   label_item: "Elemento"
   label_item_plural: "Elementi"
-  label_scored_list: "Elenco con punteggio"
+  label_weighted_item_list: "Weighted item list"
   label_share: "Condividi"
   label_share_project_list: "Condividi elenco progetti"
   label_share_work_package: "Condividi macro-attività"
@@ -3889,6 +3897,7 @@ it:
     default: "-"
   project:
     archive:
+      title: "Archive project"
       are_you_sure: "Sicuro di voler archiviare il progetto '%{name}'?"
       archived: "Archiviato"
     count:

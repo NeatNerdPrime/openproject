@@ -302,7 +302,7 @@ nl:
         placeholder:
           label: "Item label"
           short: "Verkorte Naam"
-          score: "Score"
+          weight: "Weight"
       notice:
         remember_items_and_projects: "Vergeet niet om items en projecten in te stellen op de respectievelijke tabbladen voor dit aangepaste veld."
       hierarchy:
@@ -321,8 +321,8 @@ nl:
     placeholder_version_select: "Werkpakket- of projectselectie is eerst vereist"
     calculated_field_not_editable: "Non-editable attribute. This value is calculated automatically."
     instructions:
-      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources."
-      is_required_for_project: "Vink aan om dit attribuut te activeren en het in alle projecten vereist te maken. Het kan niet worden gedeactiveerd voor individuele projecten."
+      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources. Existing resources will not require a value when being updated."
+      is_required_for_project: "Check to enable this attribute and make it required in all projects. It cannot be deactived for individual projects. Existing projects will not require a value when being updated."
       is_for_all: "Mark the custom field as available in all existing and new projects."
       multi_select: "Hiermee kan de gebruiker meerdere waarden aan dit aangepaste veld toewijzen."
       searchable: "Include the field values when using the global search functionality."
@@ -337,12 +337,12 @@ nl:
       no_results_content_text: Maak een nieuw aangepast veld
   calculated_values:
     error_dialog:
-      title: "Error with Calculated Value"
+      title: "Error with Calculated value"
     errors:
-      unknown: "An unknown error occurred. Please review the formula for this Calculated Value."
-      mathematical: "A mathematical error occurred during calculation."
-      missing_value: The attribute "%{custom_field_name}" is required by this Calculated Value but is empty.
-      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated Value but is disabled for the project.
+      unknown: "An unknown error occurred. Please review the formula for this Calculated value."
+      mathematical: "The mathematical formula leads to an error. Please review the project calculation attribute and try again."
+      missing_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is empty.
+      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is disabled for the project.
   concatenation:
     single: "of"
   danger_dialog:
@@ -388,7 +388,7 @@ nl:
       depth: "Diepte"
       item: "Item"
       label: "Label"
-      score: "Score"
+      weight: "Weight"
       short: "Verkorte Naam"
       parent: "Bovenliggend werkpakket"
       blueprint: "Patroonblauwdruk"
@@ -1378,8 +1378,6 @@ nl:
         inclusion: "is niet ingesteld op één van de toegestane waarden."
         inclusion_nested: "is niet ingesteld op een van de toegestane waarden op pad '%{path}'."
         invalid: "is ongeldig."
-        invalid_characters: "contains invalid characters."
-        not_allowed_custom_fields_referenced: "contains custom fields that are not allowed: %{custom_fields}."
         invalid_url: "is geen geldige URL."
         invalid_url_scheme: "is geen ondersteunde protocol (toegestaan: %{allowed_schemes})."
         less_than_or_equal_to: "moet kleiner zijn dan of gelijk aan %{count}."
@@ -1437,6 +1435,13 @@ nl:
           referenced_in_other_fields_html:
             one: "%{name} is used in project attribute calculation %{links}."
             other: "%{name} is used in project attribute calculations: %{links}."
+          attributes:
+            formula:
+              blank: "Formula can't be blank."
+              invalid: "Formula is invalid."
+              invalid_characters: "Only numeric values, mathematical operators and project attributes of type integer, float, calculated value and weighted list are allowed."
+              not_allowed_custom_fields_referenced: "The attribute %{custom_fields} cannot be used because it leads to a circular reference; one attribute depends on the other."
+              format: "%{message}"
         custom_fields_project:
           attributes:
             project_ids:
@@ -2260,11 +2265,11 @@ nl:
     features:
       baseline_comparison: Baseline Comparisons
       board_view: Advanced Boards
-      calculated_values: Calculated Values
+      calculated_values: Calculated values
       conditional_highlighting: Conditional Highlighting
       internal_comments: Internal Comments
       custom_actions: Custom Actions
-      custom_field_hierarchies: Custom fields of type hierarchy
+      custom_field_hierarchies: Hierarchies
       customize_life_cycle: Customize Life Cycle
       date_alerts: Date Alerts
       define_custom_style: Custom theme and logo
@@ -2280,6 +2285,7 @@ nl:
       sso_auth_providers: Single Sign-On
       team_planner_view: Team Planner View
       virus_scanning: Antivirus Scanning
+      weighted_item_lists: Weighted item lists
       work_package_query_relation_columns: Work Package Query Relation Columns
       work_package_sharing: Share work packages with external users
       work_package_subject_generation: Work Package Subject Generation
@@ -2326,15 +2332,17 @@ nl:
       readonly_work_packages:
         description: "Mark work packages as read-only for specific statuses."
       custom_field_hierarchies:
-        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages by making use of multi-level select lists."
+        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages and projects by making use of multi-level select lists."
       date_alerts:
         description: "Met datummeldingen wordt u op de hoogte gebracht van de start- of einddatum, zodat u nooit een belangrijke deadline mist of vergeet."
+      weighted_item_lists:
+        description: "Weighted item lists allow you to create a list with underlying numeric values associated."
       work_package_sharing:
         description: "Werkpakketten delen met gebruikers die geen lid zijn van het project."
       project_list_sharing:
         description: "Share project lists with individual users."
       calculated_values:
-        description: "Calculated Values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
+        description: "Calculated values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Opmerking: het gebruikte logo is openbaar toegankelijk."
@@ -2890,7 +2898,7 @@ nl:
   label_select_main_menu_item: Selecteer nieuwe hoofdmenu-item
   label_required_disk_storage: "Vereiste schijfruimte"
   label_send_invitation: Verstuur uitnodiging
-  label_calculated_value: "Calculated Value"
+  label_calculated_value: "Calculated value"
   label_change_parent: "Wijzig bovenliggende pagina"
   label_change_plural: "Wijzigingen"
   label_change_properties: "Eigenschappen wijzigen"
@@ -3072,7 +3080,7 @@ nl:
   label_invite_user: "Gebruiker uitnodigen"
   label_item: "Item"
   label_item_plural: "Items"
-  label_scored_list: "Scored list"
+  label_weighted_item_list: "Weighted item list"
   label_share: "Deel"
   label_share_project_list: "Projectlijst delen"
   label_share_work_package: "Werkpakket delen"
@@ -3887,6 +3895,7 @@ nl:
     default: "-"
   project:
     archive:
+      title: "Archive project"
       are_you_sure: "Weet u zeker dat u dit project '%{name}' wilt archiveren?"
       archived: "Gearchiveerd"
     count:

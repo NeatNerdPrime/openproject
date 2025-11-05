@@ -302,7 +302,7 @@ pl:
         placeholder:
           label: "Etykieta elementu"
           short: "Nazwa skrócona"
-          score: "Wynik"
+          weight: "Weight"
       notice:
         remember_items_and_projects: "Pamiętaj, aby ustawić elementy i projekty w odpowiednich zakładkach dla tego pola niestandardowego."
       hierarchy:
@@ -321,8 +321,8 @@ pl:
     placeholder_version_select: "W pierwszej kolejności wymagany jest wybór pakietu roboczego lub projektu"
     calculated_field_not_editable: "Atrybut nieedytowalny. Ta wartość jest obliczana automatycznie."
     instructions:
-      is_required: "Oznacz pole niestandardowe jako wymagane. To spowoduje obowiązkowe wypełnianie pola podczas tworzenia nowych lub aktualizacji istniejących zasobów."
-      is_required_for_project: "Zaznacz, aby włączyć ten atrybut i uczynić go wymaganym we wszystkich projektach. Nie można go wyłączyć dla poszczególnych projektów."
+      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources. Existing resources will not require a value when being updated."
+      is_required_for_project: "Check to enable this attribute and make it required in all projects. It cannot be deactived for individual projects. Existing projects will not require a value when being updated."
       is_for_all: "Zaznacz pole niestandardowe jako dostępne we wszystkich istniejących i nowych projektach."
       multi_select: "Umożliwia użytkownikowi przypisanie wielu wartości do tego pola niestandardowego."
       searchable: "Uwzględnij wartości pól podczas korzystania z funkcji wyszukiwania globalnego."
@@ -337,12 +337,12 @@ pl:
       no_results_content_text: Utwórz pole użytkownika
   calculated_values:
     error_dialog:
-      title: "Błąd w Obliczonej wartości"
+      title: "Error with Calculated value"
     errors:
-      unknown: "Wystąpił nieoczekiwany błąd. Sprawdź formułę dla Obliczonej wartości."
-      mathematical: "Podczas obliczeń wystąpił błąd matematyczny."
-      missing_value: Atrybut "%{custom_field_name}" jest wymagany przez tę Obliczoną wartość, ale jest pusty.
-      disabled_value: Atrybut "%{custom_field_name}" jest wymagany przez tę Obliczoną wartość, ale jest wyłączony dla projektu.
+      unknown: "An unknown error occurred. Please review the formula for this Calculated value."
+      mathematical: "The mathematical formula leads to an error. Please review the project calculation attribute and try again."
+      missing_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is empty.
+      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is disabled for the project.
   concatenation:
     single: "lub"
   danger_dialog:
@@ -388,7 +388,7 @@ pl:
       depth: "Głębokość"
       item: "Element"
       label: "Etykieta"
-      score: "Wynik"
+      weight: "Weight"
       short: "Nazwa skrócona"
       parent: "Element nadrzędny"
       blueprint: "Plan wzorca"
@@ -1394,8 +1394,6 @@ pl:
         inclusion: "jest niezgodne z jednym z dozwolonych wartości."
         inclusion_nested: "nie jest ustawione na jedną z dozwolonych wartości na ścieżce '%{path}'."
         invalid: "jest nieprawidłowe."
-        invalid_characters: "zawiera niedozwolone znaki."
-        not_allowed_custom_fields_referenced: "zawiera niedozwolone pola niestandardowe: %{custom_fields}."
         invalid_url: "nie jest poprawnym adresem URL."
         invalid_url_scheme: "nie jest obsługiwanym protokołem (dozwolone: %{allowed_schemes})."
         less_than_or_equal_to: "musi być mniejsze niż lub równe %{count}."
@@ -1455,6 +1453,13 @@ pl:
             few: "%{name} jest używany w obliczeniach atrybutów projektu %{links}."
             many: "%{name} jest używany w obliczeniach atrybutów projektu %{links}."
             other: "%{name} jest używany w obliczeniach atrybutów projektu: %{links}."
+          attributes:
+            formula:
+              blank: "Formula can't be blank."
+              invalid: "Formula is invalid."
+              invalid_characters: "Only numeric values, mathematical operators and project attributes of type integer, float, calculated value and weighted list are allowed."
+              not_allowed_custom_fields_referenced: "The attribute %{custom_fields} cannot be used because it leads to a circular reference; one attribute depends on the other."
+              format: "%{message}"
         custom_fields_project:
           attributes:
             project_ids:
@@ -2348,11 +2353,11 @@ pl:
     features:
       baseline_comparison: Porównania linii odniesienia
       board_view: Tablice zaawansowane
-      calculated_values: Obliczone wartości
+      calculated_values: Calculated values
       conditional_highlighting: Wyróżnianie warunkowe
       internal_comments: Komentarze wewnętrzne
       custom_actions: Działania niestandardowe
-      custom_field_hierarchies: Pola niestandardowe hierarchii typów
+      custom_field_hierarchies: Hierarchies
       customize_life_cycle: Dostosuj cykl życia
       date_alerts: Alerty dotyczące dat
       define_custom_style: Niestandardowy motyw i logotyp
@@ -2368,6 +2373,7 @@ pl:
       sso_auth_providers: Logowanie jednokrotne
       team_planner_view: Widok planisty zespołu
       virus_scanning: Skanowanie antywirusowe
+      weighted_item_lists: Weighted item lists
       work_package_query_relation_columns: Kolumny relacji zapytań dotyczących pakietów roboczych
       work_package_sharing: Udostępnij pakiety robocze użytkownikom zewnętrznym
       work_package_subject_generation: Generowanie tematu pakietu roboczego
@@ -2414,15 +2420,17 @@ pl:
       readonly_work_packages:
         description: "Oznacz pakiety robocze jako tylko do odczytu w przypadku określonych statusów."
       custom_field_hierarchies:
-        description: "Pola niestandardowe hierarchii umożliwiają organizowanie hierarchicznych struktur w pakietach roboczych poprzez użycie wielopoziomowych list wyboru."
+        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages and projects by making use of multi-level select lists."
       date_alerts:
         description: "Dzięki alertom dotyczącym dat będziesz otrzymywać powiadomienia o zbliżających się terminach rozpoczęcia lub zakończenia pracy, dzięki czemu nigdy nie przegapisz ani nie zapomnisz ważnego terminu."
+      weighted_item_lists:
+        description: "Weighted item lists allow you to create a list with underlying numeric values associated."
       work_package_sharing:
         description: "Udostępnij pakiety robocze użytkownikom, którzy nie są członkami projektu."
       project_list_sharing:
         description: "Udostępniaj listy projektów poszczególnym użytkownikom."
       calculated_values:
-        description: "Obliczone wartości umożliwiają utworzenie atrybutu opartego na formule matematycznej przy użyciu wartości liczbowych i innych atrybutów projektu oraz pól niestandardowych."
+        description: "Calculated values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
       define_custom_style:
         title: "Niestandardowy motyw kolorystyczny i logotyp"
         more_info: "Uwaga: użyte logo będzie ogólnodostępne."
@@ -2980,7 +2988,7 @@ pl:
   label_select_main_menu_item: Wybierz nową pozycję menu głównego
   label_required_disk_storage: "Wymagane miejsce na dysku"
   label_send_invitation: Wyślij zaproszenie
-  label_calculated_value: "Obliczona wartość"
+  label_calculated_value: "Calculated value"
   label_change_parent: "Zmień element nadrzędny"
   label_change_plural: "Zmiany"
   label_change_properties: "Zmiana właściwości"
@@ -3162,7 +3170,7 @@ pl:
   label_invite_user: "Zaproś użytkownika"
   label_item: "Element"
   label_item_plural: "Elementy"
-  label_scored_list: "Lista punktowana"
+  label_weighted_item_list: "Weighted item list"
   label_share: "Udostępnij"
   label_share_project_list: "Udostępnij listę projektów"
   label_share_work_package: "Udostępnij pakiet roboczy"
@@ -3981,6 +3989,7 @@ pl:
     default: "-"
   project:
     archive:
+      title: "Archive project"
       are_you_sure: "Jesteś pewien, że chcesz zarchiwizować projekt '%{name}'?"
       archived: "Zarchiwizowano"
     count:

@@ -303,7 +303,7 @@ ja:
         placeholder:
           label: "アイテムラベル"
           short: "ショートネーム"
-          score: "スコア"
+          weight: "Weight"
       notice:
         remember_items_and_projects: "このカスタムフィールドの各タブに項目とプロジェクトを設定することを忘れないでください。"
       hierarchy:
@@ -322,8 +322,8 @@ ja:
     placeholder_version_select: "最初にワークパッケージまたはプロジェクトの選択が必要です"
     calculated_field_not_editable: "Non-editable attribute. This value is calculated automatically."
     instructions:
-      is_required: "必要に応じてカスタムフィールドをマークします。新規または既存のリソースを作成する際にフィールドを入力することが必須になります。"
-      is_required_for_project: "この属性を有効にし、すべてのプロジェクトで必要にする場合チェックします。個々のプロジェクトでは無効にすることはできません。"
+      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources. Existing resources will not require a value when being updated."
+      is_required_for_project: "Check to enable this attribute and make it required in all projects. It cannot be deactived for individual projects. Existing projects will not require a value when being updated."
       is_for_all: "既存および新規のすべてのプロジェクトで利用可能なカスタムフィールドとしてマークします。"
       multi_select: "ユーザーがこのカスタムフィールドに複数の値を割り当てることを許可します。"
       searchable: "グローバル検索機能を使用する場合は、フィールド値を含めます。"
@@ -338,12 +338,12 @@ ja:
       no_results_content_text: 新しいカスタム フィールドを作成
   calculated_values:
     error_dialog:
-      title: "Error with Calculated Value"
+      title: "Error with Calculated value"
     errors:
-      unknown: "An unknown error occurred. Please review the formula for this Calculated Value."
-      mathematical: "A mathematical error occurred during calculation."
-      missing_value: The attribute "%{custom_field_name}" is required by this Calculated Value but is empty.
-      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated Value but is disabled for the project.
+      unknown: "An unknown error occurred. Please review the formula for this Calculated value."
+      mathematical: "The mathematical formula leads to an error. Please review the project calculation attribute and try again."
+      missing_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is empty.
+      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is disabled for the project.
   concatenation:
     single: "または"
   danger_dialog:
@@ -389,7 +389,7 @@ ja:
       depth: "深さ"
       item: "項目"
       label: "Label"
-      score: "スコア"
+      weight: "Weight"
       short: "ショートネーム"
       parent: "親項目"
       blueprint: "パターンの建設計画"
@@ -1373,8 +1373,6 @@ ja:
         inclusion: "は許可されている値ではありません。"
         inclusion_nested: "はパス '%{path}' で許可されている値のいずれかに設定されていません。"
         invalid: "は不正な値です。"
-        invalid_characters: "無効な文字が含まれています。"
-        not_allowed_custom_fields_referenced: "には許可されていないカスタムフィールドが含まれています: %{custom_fields}。"
         invalid_url: "は有効な URL ではありません。"
         invalid_url_scheme: "はサポートされたプロトコルではありません (可能: %{allowed_schemes})。"
         less_than_or_equal_to: "は%{count}以下の値にしてください。"
@@ -1431,6 +1429,13 @@ ja:
           at_least_one_custom_option: "少なくとも 1 つオプションが有効である必要があります。"
           referenced_in_other_fields_html:
             other: "%{name}はプロジェクト属性の計算に使用されます：%{links}。"
+          attributes:
+            formula:
+              blank: "Formula can't be blank."
+              invalid: "Formula is invalid."
+              invalid_characters: "Only numeric values, mathematical operators and project attributes of type integer, float, calculated value and weighted list are allowed."
+              not_allowed_custom_fields_referenced: "The attribute %{custom_fields} cannot be used because it leads to a circular reference; one attribute depends on the other."
+              format: "%{message}"
         custom_fields_project:
           attributes:
             project_ids:
@@ -2219,11 +2224,11 @@ ja:
     features:
       baseline_comparison: ベースラインの比較
       board_view: 高度なボード
-      calculated_values: Calculated Values
+      calculated_values: Calculated values
       conditional_highlighting: 条件付きハイライト
       internal_comments: 内部コメント
       custom_actions: カスタムアクション
-      custom_field_hierarchies: タイプ階層のカスタムフィールド
+      custom_field_hierarchies: Hierarchies
       customize_life_cycle: ライフサイクルをカスタマイズ
       date_alerts: 日付アラート
       define_custom_style: カスタムテーマとロゴ
@@ -2239,6 +2244,7 @@ ja:
       sso_auth_providers: シングルサインオン
       team_planner_view: チームプランナー
       virus_scanning: アンチウイルススキャン
+      weighted_item_lists: Weighted item lists
       work_package_query_relation_columns: ワークパッケージクエリの関連列
       work_package_sharing: 外部ユーザーとワークパッケージを共有
       work_package_subject_generation: ワークパッケージの題名を生成
@@ -2285,15 +2291,17 @@ ja:
       readonly_work_packages:
         description: "特定のステータスのワークパッケージを読み取り専用としてマークします。"
       custom_field_hierarchies:
-        description: "階層のカスタム項目では、マルチレベル選択リストを使用してワークパッケージ内の階層構造を整理できます。"
+        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages and projects by making use of multi-level select lists."
       date_alerts:
         description: "日付アラートでは、重要な期限を逃したり忘れたりすることは決してないように、今後の開始または終了日が通知されます。"
+      weighted_item_lists:
+        description: "Weighted item lists allow you to create a list with underlying numeric values associated."
       work_package_sharing:
         description: "プロジェクトのメンバーではないユーザーとワークパッケージを共有します。"
       project_list_sharing:
         description: "プロジェクトリストを個々のユーザーと共有します。"
       calculated_values:
-        description: "Calculated Values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
+        description: "Calculated values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
       define_custom_style:
         title: "カスタムカラーテーマとロゴ"
         more_info: "注:使用されたロゴは一般公開されます。"
@@ -2848,7 +2856,7 @@ ja:
   label_select_main_menu_item: 新しいメインメニュー項目を選択する
   label_required_disk_storage: "必要なディスク ストレージ"
   label_send_invitation: 招待状を送信
-  label_calculated_value: "Calculated Value"
+  label_calculated_value: "Calculated value"
   label_change_parent: "親タスクの変更"
   label_change_plural: "変更"
   label_change_properties: "プロパティの変更"
@@ -3030,7 +3038,7 @@ ja:
   label_invite_user: "ユーザを招待"
   label_item: "項目"
   label_item_plural: "アイテム"
-  label_scored_list: "得点リスト"
+  label_weighted_item_list: "Weighted item list"
   label_share: "共有"
   label_share_project_list: "プロジェクト一覧を共有"
   label_share_work_package: "ワークパッケージを共有"
@@ -3844,6 +3852,7 @@ ja:
     default: "-"
   project:
     archive:
+      title: "Archive project"
       are_you_sure: "プロジェクト '%{name}' をアーカイブしてもよろしいですか？"
       archived: "アーカイブ済み"
     count:

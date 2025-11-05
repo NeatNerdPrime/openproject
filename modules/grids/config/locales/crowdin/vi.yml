@@ -7,9 +7,12 @@ vi:
         no_results: "There are no visible children."
         view_all_subitems: "View all subitems"
       members:
-        title: "Latest members"
+        title: "Members"
         no_results: "Không có thành viên nào được hiển thị."
         view_all_members: "Xem tất cả thành viên"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          other: "and %{count} more members."
       news:
         no_results: "Không có gì mới để báo cáo."
   activerecord:

@@ -7,9 +7,13 @@ it:
         no_results: "Non ci sono elementi figli visibili."
         view_all_subitems: "Visualizza tutti i sottoelementi"
       members:
-        title: "Ultimi membri"
+        title: "Members"
         no_results: "Nessun membro visibile."
         view_all_members: "Visualizza tutti i membri"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Niente di nuovo da segnalare."
   activerecord:

@@ -7,9 +7,13 @@ fa:
         no_results: "There are no visible children."
         view_all_subitems: "View all subitems"
       members:
-        title: "آخرین اعضا"
+        title: "Members"
         no_results: "No visible members."
         view_all_members: "مشاهده همه کاربران"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Nothing new to report."
   activerecord:

@@ -305,7 +305,7 @@ uz:
         placeholder:
           label: "Item label"
           short: "Short name"
-          score: "Score"
+          weight: "Weight"
       notice:
         remember_items_and_projects: "Remember to set items and projects in the respective tabs for this custom field."
       hierarchy:
@@ -324,8 +324,8 @@ uz:
     placeholder_version_select: "Work package or project selection is required first"
     calculated_field_not_editable: "Non-editable attribute. This value is calculated automatically."
     instructions:
-      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources."
-      is_required_for_project: "Check to enable this attribute and make it required in all projects. It cannot be deactived for individual projects."
+      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources. Existing resources will not require a value when being updated."
+      is_required_for_project: "Check to enable this attribute and make it required in all projects. It cannot be deactived for individual projects. Existing projects will not require a value when being updated."
       is_for_all: "Mark the custom field as available in all existing and new projects."
       multi_select: "Allows the user to assign multiple values to this custom field."
       searchable: "Include the field values when using the global search functionality."
@@ -340,12 +340,12 @@ uz:
       no_results_content_text: Create a new custom field
   calculated_values:
     error_dialog:
-      title: "Error with Calculated Value"
+      title: "Error with Calculated value"
     errors:
-      unknown: "An unknown error occurred. Please review the formula for this Calculated Value."
-      mathematical: "A mathematical error occurred during calculation."
-      missing_value: The attribute "%{custom_field_name}" is required by this Calculated Value but is empty.
-      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated Value but is disabled for the project.
+      unknown: "An unknown error occurred. Please review the formula for this Calculated value."
+      mathematical: "The mathematical formula leads to an error. Please review the project calculation attribute and try again."
+      missing_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is empty.
+      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is disabled for the project.
   concatenation:
     single: "or"
   danger_dialog:
@@ -391,7 +391,7 @@ uz:
       depth: "Depth"
       item: "Item"
       label: "Label"
-      score: "Score"
+      weight: "Weight"
       short: "Short name"
       parent: "Parent"
       blueprint: "Pattern blueprint"
@@ -1382,8 +1382,6 @@ uz:
         inclusion: "is not set to one of the allowed values."
         inclusion_nested: "is not set to one of the allowed values at path '%{path}'."
         invalid: "is invalid."
-        invalid_characters: "contains invalid characters."
-        not_allowed_custom_fields_referenced: "contains custom fields that are not allowed: %{custom_fields}."
         invalid_url: "is not a valid URL."
         invalid_url_scheme: "is not a supported protocol (allowed: %{allowed_schemes})."
         less_than_or_equal_to: "must be less than or equal to %{count}."
@@ -1441,6 +1439,13 @@ uz:
           referenced_in_other_fields_html:
             one: "%{name} is used in project attribute calculation %{links}."
             other: "%{name} is used in project attribute calculations: %{links}."
+          attributes:
+            formula:
+              blank: "Formula can't be blank."
+              invalid: "Formula is invalid."
+              invalid_characters: "Only numeric values, mathematical operators and project attributes of type integer, float, calculated value and weighted list are allowed."
+              not_allowed_custom_fields_referenced: "The attribute %{custom_fields} cannot be used because it leads to a circular reference; one attribute depends on the other."
+              format: "%{message}"
         custom_fields_project:
           attributes:
             project_ids:
@@ -2264,11 +2269,11 @@ uz:
     features:
       baseline_comparison: Baseline Comparisons
       board_view: Advanced Boards
-      calculated_values: Calculated Values
+      calculated_values: Calculated values
       conditional_highlighting: Conditional Highlighting
       internal_comments: Internal Comments
       custom_actions: Custom Actions
-      custom_field_hierarchies: Custom fields of type hierarchy
+      custom_field_hierarchies: Hierarchies
       customize_life_cycle: Customize Life Cycle
       date_alerts: Date Alerts
       define_custom_style: Custom theme and logo
@@ -2284,6 +2289,7 @@ uz:
       sso_auth_providers: Single Sign-On
       team_planner_view: Team Planner View
       virus_scanning: Antivirus Scanning
+      weighted_item_lists: Weighted item lists
       work_package_query_relation_columns: Work Package Query Relation Columns
       work_package_sharing: Share work packages with external users
       work_package_subject_generation: Work Package Subject Generation
@@ -2330,15 +2336,17 @@ uz:
       readonly_work_packages:
         description: "Mark work packages as read-only for specific statuses."
       custom_field_hierarchies:
-        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages by making use of multi-level select lists."
+        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages and projects by making use of multi-level select lists."
       date_alerts:
         description: "With date alerts, you will be notified of upcoming start or finish dates so that you never miss or forget an important deadline."
+      weighted_item_lists:
+        description: "Weighted item lists allow you to create a list with underlying numeric values associated."
       work_package_sharing:
         description: "Share work packages with users who are not members of the project."
       project_list_sharing:
         description: "Share project lists with individual users."
       calculated_values:
-        description: "Calculated Values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
+        description: "Calculated values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Note: the used logo will be publicly accessible."
@@ -2894,7 +2902,7 @@ uz:
   label_select_main_menu_item: Select new main menu item
   label_required_disk_storage: "Required disk storage"
   label_send_invitation: Send invitation
-  label_calculated_value: "Calculated Value"
+  label_calculated_value: "Calculated value"
   label_change_parent: "Change parent"
   label_change_plural: "Changes"
   label_change_properties: "Change properties"
@@ -3076,7 +3084,7 @@ uz:
   label_invite_user: "Invite user"
   label_item: "Item"
   label_item_plural: "Items"
-  label_scored_list: "Scored list"
+  label_weighted_item_list: "Weighted item list"
   label_share: "Share"
   label_share_project_list: "Share project list"
   label_share_work_package: "Share work package"
@@ -3892,6 +3900,7 @@ uz:
     default: "-"
   project:
     archive:
+      title: "Archive project"
       are_you_sure: "Are you sure you want to archive the project '%{name}'?"
       archived: "Archived"
     count:

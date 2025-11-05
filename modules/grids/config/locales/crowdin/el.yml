@@ -7,9 +7,13 @@ el:
         no_results: "There are no visible children."
         view_all_subitems: "View all subitems"
       members:
-        title: "Latest members"
+        title: "Members"
         no_results: "Δεν υπάρχουν ορατά μέλη."
         view_all_members: "Δείτε όλα τα μέλη"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Τίποτα νέο για αναφορά."
   activerecord:

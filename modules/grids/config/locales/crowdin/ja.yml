@@ -7,9 +7,12 @@ ja:
         no_results: "There are no visible children."
         view_all_subitems: "View all subitems"
       members:
-        title: "Latest members"
+        title: "Members"
         no_results: "表示するメンバーはありません。"
         view_all_members: "すべてのメンバーを表示"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          other: "and %{count} more members."
       news:
         no_results: "新しい報告はありません。"
   activerecord:

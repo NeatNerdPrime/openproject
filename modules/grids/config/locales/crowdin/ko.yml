@@ -7,9 +7,12 @@ ko:
         no_results: "표시되는 자식이 없습니다."
         view_all_subitems: "모든 하위 항목 보기"
       members:
-        title: "최신 멤버"
+        title: "Members"
         no_results: "표시할 멤버가 없습니다."
         view_all_members: "모든 회원 보기"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          other: "and %{count} more members."
       news:
         no_results: "새로 보고할 것이 없음"
   activerecord:

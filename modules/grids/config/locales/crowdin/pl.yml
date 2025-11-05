@@ -7,9 +7,15 @@ pl:
         no_results: "Nie ma żadnych widocznych elementów podrzędnych."
         view_all_subitems: "Wyświetl wszystkie podpozycje"
       members:
-        title: "Ostatni członkowie"
+        title: "Members"
         no_results: "Brak widocznych członków."
         view_all_members: "Zobacz wszystkich członków"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          few: "and %{count} more members."
+          many: "and %{count} more members."
+          other: "and %{count} more members."
       news:
         no_results: "Utwórz nowy raport."
   activerecord:

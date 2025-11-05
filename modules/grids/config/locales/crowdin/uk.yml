@@ -7,9 +7,15 @@ uk:
         no_results: "Немає видимих дочірніх об’єктів."
         view_all_subitems: "Переглянути всі піделементи"
       members:
-        title: "Останні учасники"
+        title: "Members"
         no_results: "Немає видимих учасників."
         view_all_members: "Переглянути всіх учасників"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          few: "and %{count} more members."
+          many: "and %{count} more members."
+          other: "and %{count} more members."
       news:
         no_results: "Нічого нового для звітування."
   activerecord:

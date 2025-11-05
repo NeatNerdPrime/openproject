@@ -7,9 +7,13 @@ es:
         no_results: "No hay subelementos visibles."
         view_all_subitems: "Ver todos los subelementos"
       members:
-        title: "Nuevos miembros"
+        title: "Members"
         no_results: "No hay miembros visibles."
         view_all_members: "Ver todos los miembros"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Nada nuevo sobre lo que informar."
   activerecord:

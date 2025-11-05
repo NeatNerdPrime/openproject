@@ -302,7 +302,7 @@ zh-CN:
         placeholder:
           label: "项目标签"
           short: "短名"
-          score: "分数"
+          weight: "Weight"
       notice:
         remember_items_and_projects: "请记住，在相应的选项卡中为此自定义字段设置条目和项目。"
       hierarchy:
@@ -321,8 +321,8 @@ zh-CN:
     placeholder_version_select: "需要先选择工作包或项目"
     calculated_field_not_editable: "不可编辑属性。此值是自动计算的。"
     instructions:
-      is_required: "将自定义字段标记为必填项。这将使在创建新资源或更新现有资源时，填写该字段成为强制要求。"
-      is_required_for_project: "选中可启用此属性，并使其成为所有项目的必选项。单个项目不能停用该属性。"
+      is_required: "Mark the custom field as required. This will make it mandatory to fill in the field when creating new or updating existing resources. Existing resources will not require a value when being updated."
+      is_required_for_project: "Check to enable this attribute and make it required in all projects. It cannot be deactived for individual projects. Existing projects will not require a value when being updated."
       is_for_all: "将自定义字段标记为在所有现有项目和新项目中可用。"
       multi_select: "允许用户为该自定义字段赋予多个值。"
       searchable: "使用全局搜索功能时包含字段值。"
@@ -337,12 +337,12 @@ zh-CN:
       no_results_content_text: 创建新的自定义字段
   calculated_values:
     error_dialog:
-      title: "计算值错误"
+      title: "Error with Calculated value"
     errors:
-      unknown: "发生未知错误。请检查此计算值的公式。"
-      mathematical: "计算过程中发生数学错误。"
-      missing_value: 该计算值需要属性 "%{custom_field_name}"，但该属性为空。
-      disabled_value: 该计算值需要属性 "%{custom_field_name}"，但它在项目中已禁用。
+      unknown: "An unknown error occurred. Please review the formula for this Calculated value."
+      mathematical: "The mathematical formula leads to an error. Please review the project calculation attribute and try again."
+      missing_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is empty.
+      disabled_value: The attribute "%{custom_field_name}" is required by this Calculated value, but is disabled for the project.
   concatenation:
     single: "或"
   danger_dialog:
@@ -388,7 +388,7 @@ zh-CN:
       depth: "深"
       item: "条目"
       label: "标签"
-      score: "分数"
+      weight: "Weight"
       short: "简称"
       parent: "父级"
       blueprint: "图案蓝图"
@@ -1370,8 +1370,6 @@ zh-CN:
         inclusion: "未设置为允许的值之一。"
         inclusion_nested: "未设置为路径“%{path}”中允许的值之一。"
         invalid: "是无效的。"
-        invalid_characters: "包含无效字符。"
-        not_allowed_custom_fields_referenced: "包含不允许使用的自定义字段： %{custom_fields}。"
         invalid_url: "不是有效的 URL。"
         invalid_url_scheme: "不是受支持的协议（允许：%{allowed_schemes}）。"
         less_than_or_equal_to: "必须小于或等于 %{count}。"
@@ -1428,6 +1426,13 @@ zh-CN:
           at_least_one_custom_option: "至少有需要一个可用选项。"
           referenced_in_other_fields_html:
             other: "%{name} 用于项目特性计算中：%{links}。"
+          attributes:
+            formula:
+              blank: "Formula can't be blank."
+              invalid: "Formula is invalid."
+              invalid_characters: "Only numeric values, mathematical operators and project attributes of type integer, float, calculated value and weighted list are allowed."
+              not_allowed_custom_fields_referenced: "The attribute %{custom_fields} cannot be used because it leads to a circular reference; one attribute depends on the other."
+              format: "%{message}"
         custom_fields_project:
           attributes:
             project_ids:
@@ -2216,11 +2221,11 @@ zh-CN:
     features:
       baseline_comparison: 基线比较
       board_view: 高级面板
-      calculated_values: 计算值
+      calculated_values: Calculated values
       conditional_highlighting: 条件高亮
       internal_comments: 内部评论
       custom_actions: 自定义操作
-      custom_field_hierarchies: 类型层次结构的自定义字段
+      custom_field_hierarchies: Hierarchies
       customize_life_cycle: 自定义生命周期
       date_alerts: 日期提醒
       define_custom_style: 自定义主题和 Logo
@@ -2236,6 +2241,7 @@ zh-CN:
       sso_auth_providers: 单点登录
       team_planner_view: 工作组规划器视图
       virus_scanning: 反病毒扫描
+      weighted_item_lists: Weighted item lists
       work_package_query_relation_columns: 工作包查询关系列
       work_package_sharing: 与外部用户共享工作包
       work_package_subject_generation: 工作包主题生成
@@ -2282,15 +2288,17 @@ zh-CN:
       readonly_work_packages:
         description: "标记工作包为只读的特定状态。"
       custom_field_hierarchies:
-        description: "层次结构自定义字段允许通过使用多层次选择列表来组织工作包中的层次结构。"
+        description: "Hierarchy custom fields allow organizing hierarchical structures in work packages and projects by making use of multi-level select lists."
       date_alerts:
         description: "通过日期提醒，您将收到即将开始或完成日期的通知，以免错过或忘记重要截止日期。"
+      weighted_item_lists:
+        description: "Weighted item lists allow you to create a list with underlying numeric values associated."
       work_package_sharing:
         description: "与非此项目成员的用户共享工作包。"
       project_list_sharing:
         description: "与个人用户共享项目列表。"
       calculated_values:
-        description: "通过计算值，您可以使用基于数值、其他项目属性和自定义字段的属性创建数学公式。"
+        description: "Calculated values allow you to create a mathematical formula based attribute using numeric values and other project attributes and custom fields."
       define_custom_style:
         title: "自定义颜色主题和 Logo"
         more_info: "注：使用的 Logo 将可公开访问。"
@@ -2845,7 +2853,7 @@ zh-CN:
   label_select_main_menu_item: 选择新的主菜单项
   label_required_disk_storage: "所需的磁盘空间"
   label_send_invitation: 发送邀请
-  label_calculated_value: "计算值"
+  label_calculated_value: "Calculated value"
   label_change_parent: "更改父级"
   label_change_plural: "更改"
   label_change_properties: "更改属性"
@@ -3027,7 +3035,7 @@ zh-CN:
   label_invite_user: "邀请用户"
   label_item: "条目"
   label_item_plural: "条目"
-  label_scored_list: "评分列表"
+  label_weighted_item_list: "Weighted item list"
   label_share: "共享"
   label_share_project_list: "共享项目列表"
   label_share_work_package: "共享工作包"
@@ -3838,6 +3846,7 @@ zh-CN:
     default: "-"
   project:
     archive:
+      title: "Archive project"
       are_you_sure: "是否确定想要归档项目 '%{name}'？"
       archived: "已存档"
     count:

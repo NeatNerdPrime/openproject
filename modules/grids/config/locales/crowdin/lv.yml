@@ -7,9 +7,14 @@ lv:
         no_results: "There are no visible children."
         view_all_subitems: "View all subitems"
       members:
-        title: "Latest members"
+        title: "Members"
         no_results: "No visible members."
         view_all_members: "Apskatīt visus"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          zero: "and %{count} more members."
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Nav jaunu ziņojumu."
   activerecord:

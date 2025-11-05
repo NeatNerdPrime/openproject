@@ -7,9 +7,13 @@ tr:
         no_results: "Görünürde hiç çocuk yok."
         view_all_subitems: "View all subitems"
       members:
-        title: "Son üyeler"
+        title: "Members"
         no_results: "Görünür üye yok."
         view_all_members: "Tüm üyeleri göster"
+        show_members_count: "Show all %{count} members"
+        x_more:
+          one: "and one more member."
+          other: "and %{count} more members."
       news:
         no_results: "Rapor için yeni birşey bulunamadı."
   activerecord:
