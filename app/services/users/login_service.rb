@@ -66,7 +66,7 @@ module Users
       token = Token::AutoLogin.create!(user:, data: token_session_information)
       cookie_options = {
         value: token.plain_value,
-        # The autologin expiry is checked on validating the token
+        # The autologin expiration is checked on validating the token
         # but still expire the cookie to avoid unnecessary retries
         expires: token.expires_on,
         path: OpenProject::Configuration["autologin_cookie_path"],

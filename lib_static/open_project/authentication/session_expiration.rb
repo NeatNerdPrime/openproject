@@ -27,49 +27,27 @@
 #
 # See COPYRIGHT and LICENSE files for more details.
 #++
-#
-require "spec_helper"
 
-RSpec.describe Settings::AuthenticationSettingsForm, type: :forms do
-  include ViewComponent::TestHelpers
+module OpenProject
+  module Authentication
+    module SessionExpiration
+      def session_ttl_enabled?
+        Setting.session_ttl_enabled? && Setting.session_ttl.to_i >= 5
+      end
 
-  def render_form
-    render_in_view_context(described_class) do |described_class|
-      primer_form_with(url: "/foo") do |f|
-        render(described_class.new(f))
+      def session_ttl_minutes
+        Setting.session_ttl.to_i.minutes
+      end
+
+      def session_ttl_expired?
+        # Only when the TTL setting exists
+        return false unless session_ttl_enabled?
+
+        # If the session is rack-provided and empty, also skip it
+        return false if session.empty?
+
+        session[:updated_at].nil? || (session[:updated_at] + session_ttl_minutes) < Time.now
       end
     end
-  end
-
-  before do
-    render_form
-  end
-
-  it "renders 'Autologin' select list" do
-    expect(page).to have_select "Autologin"
-  end
-
-  it "renders 'Session expires' checkbox" do
-    expect(page).to have_unchecked_field "Session expires"
-  end
-
-  it "renders 'Session expiration time after inactivity' number field" do
-    expect(page).to have_field "Session expiration time after inactivity", type: "number"
-  end
-
-  it "renders 'Log user login, name, and mail address for all requests' checkbox" do
-    expect(page).to have_unchecked_field "Log user login, name, and mail address for all requests"
-  end
-
-  it "renders 'First login redirect' text field" do
-    expect(page).to have_field "First login redirect"
-  end
-
-  it "renders 'After login redirect' text field" do
-    expect(page).to have_field "After login redirect"
-  end
-
-  it "renders Save button" do
-    expect(page).to have_button "Save", class: "Button--primary"
   end
 end

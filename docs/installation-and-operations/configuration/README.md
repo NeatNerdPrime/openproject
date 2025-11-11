@@ -547,7 +547,7 @@ OPENPROJECT_REMOTE__STORAGE__DOWNLOAD__HOST=mybucket.s3.eu-west.amazonaws.com"
 
 When using remote storage for attachments via fog - usually S3 (see [`attachments_storage`](#attachments-storage) option) - each attachment download will generate a temporary URL. This option determines how long these links will be valid.
 
-The default is 21600 seconds, that is 6 hours, which is the maximum expiry time allowed by S3 when using IAM roles for authentication.
+The default is 21600 seconds, that is 6 hours, which is the maximum expiration time allowed by S3 when using IAM roles for authentication.
 
 *default: 21600*
 
@@ -698,7 +698,7 @@ OPENPROJECT_SECURITY__BADGE__DISPLAYED="false"
 * When using `redis`, the following configuration option is relevant:
   * `cache_redis_url`: The URL of the Redis host (e.g., `redis://host:6379`)
 
-* `cache_expires_in`: Expiration time for memcache entries (default: `nil`, no expiry)
+* `cache_expires_in`: Expiration time for memcache entries (default: `nil`, no expiration)
 * `cache_namespace`: Namespace for cache keys, useful when multiple applications use a single memcache server (default: `nil`)
 
 ### Rails asset host

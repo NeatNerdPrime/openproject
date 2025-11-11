@@ -64,19 +64,19 @@ RSpec.describe "Authentication Settings", :js do
 
     it "allows changing session expiration options" do
       expect(login_page).to have_unchecked_field "Session expires"
-      expect(login_page).to have_no_field "Session expiry time after inactivity"
+      expect(login_page).to have_no_field "Session expiration time after inactivity"
 
       check "Session expires"
-      expect(login_page).to have_field "Session expiry time after inactivity"
+      expect(login_page).to have_field "Session expiration time after inactivity"
 
-      fill_in "Session expiry time after inactivity", with: "30"
+      fill_in "Session expiration time after inactivity", with: "30"
 
       login_page.save
       Setting.clear_cache
       login_page.reload!
 
       expect(login_page).to have_checked_field "Session expires"
-      expect(login_page).to have_field "Session expiry time after inactivity", with: "30", described_by: "minutes"
+      expect(login_page).to have_field "Session expiration time after inactivity", with: "30", described_by: "minutes"
 
       uncheck "Session expires"
 
@@ -85,7 +85,7 @@ RSpec.describe "Authentication Settings", :js do
       login_page.reload!
 
       expect(login_page).to have_unchecked_field "Session expires"
-      expect(login_page).to have_no_field "Session expiry time after inactivity"
+      expect(login_page).to have_no_field "Session expiration time after inactivity"
     end
 
     it "allows changing logging options" do

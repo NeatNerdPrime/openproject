@@ -270,11 +270,11 @@ To view and manage your OpenProject sessions navigate to **Account settings** an
 
 ![Sessions management in OpenProject account settings](openproject_account_settings_sessions_management.png)
 
-Here you can view and manage all of your active and remembered sessions in one place. Each row shows the browser, device, expiry date and last connection timestamp. For your current session the “Last connection” column displays **“Current (this device)”**.
+Here you can view and manage all of your active and remembered sessions in one place. Each row shows the browser, device, expiration date and last connection timestamp. For your current session the “Last connection” column displays **“Current (this device)”**.
 
 You can revoke a session at any time by clicking the **×** icon at the end of the row. Hover over the icon to see the **“Revoke”** tooltip. When you click, a confirmation message appears.
 
-Sessions expire automatically according to your instance’s authentication settings. Remembered sessions show their expiry in relative time (for example “in 5 days”).
+Sessions expire automatically according to your instance’s authentication settings. Remembered sessions show their expiration in relative time (for example “in 5 days”).
 
 > [!NOTE]
 > Closing a browser does not necessarily terminate the session. It might still be displayed in the list and will be reactivated if you open the browser. This depends on both your browser's and the OpenProject instance's settings.

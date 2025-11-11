@@ -29,7 +29,7 @@ Under the *Login* tab you can adjust following settings:
 
 2. Activate the **session expiration option**. 
 
-3. Set the **duration for inactivity time**, after which a session will expire. Note that any value below 5 will be treated as disabling the session expiry setting.
+3. Set the **duration for inactivity time**, after which a session will expire. Note that any value below 5 will be treated as disabling the session expiration setting.
 
 4. Define whether **user login, name, and mail address** should be logged for all requests.
 

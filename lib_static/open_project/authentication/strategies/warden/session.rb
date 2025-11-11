@@ -28,7 +28,7 @@
 # See COPYRIGHT and LICENSE files for more details.
 #++
 
-require "open_project/authentication/session_expiry"
+require "open_project/authentication/session_expiration"
 
 module OpenProject
   module Authentication
@@ -39,7 +39,7 @@ module OpenProject
         # not been unified in terms of Warden strategies and is only locally
         # applied to the API v3.
         class Session < ::Warden::Strategies::Base
-          include ::OpenProject::Authentication::SessionExpiry
+          include ::OpenProject::Authentication::SessionExpiration
 
           def valid?
             # A session must exist and valid

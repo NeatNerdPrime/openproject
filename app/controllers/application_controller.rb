@@ -51,7 +51,7 @@ class ApplicationController < ActionController::Base
   include Accounts::UserLogin
   include Accounts::Authorization
   include Accounts::EnterpriseGuard
-  include ::OpenProject::Authentication::SessionExpiry
+  include ::OpenProject::Authentication::SessionExpiration
   include AdditionalUrlHelpers
   include OpenProjectErrorHelper
   include Security::DefaultUrlOptions
