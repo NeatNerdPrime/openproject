@@ -354,7 +354,7 @@ group :development, :test do
   gem "rubocop-factory_bot", require: false
   gem "rubocop-openproject", require: false
   gem "rubocop-performance", require: false
-  gem "rubocop-rails", "= 2.33.3", require: false # 2.33.4 has issues with Rails/ActionControllerFlashBeforeRender
+  gem "rubocop-rails", "2.33.4", require: false # 2.33.4 has issues with Rails/ActionControllerFlashBeforeRender
   gem "rubocop-rspec", require: false
   gem "rubocop-rspec_rails", require: false
 
