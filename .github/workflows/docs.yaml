@@ -17,7 +17,7 @@ jobs:
     name: Check internal links in documentation
     runs-on: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
@@ -26,13 +26,13 @@ jobs:
     name: Check README.md case in documentation
     runs-on: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: script/docs/check_readme_case
   docs-readme-yaml-header-syntax-check:
     name: Check README.md YAML header syntax in documentation
     runs-on: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
