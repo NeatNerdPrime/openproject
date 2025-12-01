@@ -16,7 +16,7 @@ jobs:
   build-release-candidate:
     # References to release/X.Y and X.Y-rc are being
     # updated from the devkit (UpdateWorkflows step) whenever a new release branch is created
-    uses: opf/openproject/.github/workflows/docker.yml@release/16.6
+    uses: opf/openproject/.github/workflows/docker.yml@release/17.0
     with:
       branch: release/16.6
       tag: 16.6-rc
