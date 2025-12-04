@@ -137,7 +137,7 @@ gem "rack-attack", "~> 6.8.0"
 gem "browser", "~> 6.2.0"
 
 # Providing health checks
-gem "okcomputer", "~> 1.19.0"
+gem "okcomputer", "~> 1.19.1"
 
 # Lograge to provide sane and non-verbose logging
 gem "lograge", "~> 0.14.0"
