@@ -168,5 +168,21 @@ module Projects
         attributes
       end
     end
+
+    private
+
+    def build_missing_project_custom_field_project_mappings(project)
+      # Build mappings using the concern's logic
+      super
+
+      # Copy creation_wizard flag from source project's mappings to the newly built mappings
+      source_mappings_by_custom_field_id = source.project_custom_field_project_mappings
+        .index_by(&:custom_field_id)
+
+      project.project_custom_field_project_mappings.each do |mapping|
+        source_mapping = source_mappings_by_custom_field_id[mapping.custom_field_id]
+        mapping.creation_wizard = source_mapping.creation_wizard if source_mapping
+      end
+    end
   end
 end

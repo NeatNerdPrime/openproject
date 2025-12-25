@@ -214,6 +214,51 @@ RSpec.describe(
           end
         end
 
+        context "with project custom field mapping creation_wizard flag" do
+          let(:text_custom_field) { create(:text_project_custom_field) }
+
+          before do
+            source.custom_values << CustomValue.new(custom_field: text_custom_field, value: "test value")
+            source.save!
+          end
+
+          context "when creation_wizard is true" do
+            before do
+              mapping = source.project_custom_field_project_mappings.find_by(custom_field_id: text_custom_field.id)
+              mapping.update!(creation_wizard: true)
+            end
+
+            it "copies the creation_wizard flag as true" do
+              expect(subject).to be_success
+
+              source_mapping = source.project_custom_field_project_mappings.find_by(custom_field_id: text_custom_field.id)
+              copied_mapping = project_copy.project_custom_field_project_mappings.find_by(custom_field_id: text_custom_field.id)
+
+              expect(copied_mapping).to be_present
+              expect(copied_mapping.creation_wizard).to be true
+              expect(copied_mapping.creation_wizard).to eq(source_mapping.creation_wizard)
+            end
+          end
+
+          context "when creation_wizard is false" do
+            before do
+              mapping = source.project_custom_field_project_mappings.find_by(custom_field_id: text_custom_field.id)
+              mapping.update!(creation_wizard: false)
+            end
+
+            it "copies the creation_wizard flag as false" do
+              expect(subject).to be_success
+
+              source_mapping = source.project_custom_field_project_mappings.find_by(custom_field_id: text_custom_field.id)
+              copied_mapping = project_copy.project_custom_field_project_mappings.find_by(custom_field_id: text_custom_field.id)
+
+              expect(copied_mapping).to be_present
+              expect(copied_mapping.creation_wizard).to be false
+              expect(copied_mapping.creation_wizard).to eq(source_mapping.creation_wizard)
+            end
+          end
+        end
+
         context "with calculated custom fields",
                 with_ee: %i[calculated_values],
                 with_flag: { calculated_value_project_attribute: true } do

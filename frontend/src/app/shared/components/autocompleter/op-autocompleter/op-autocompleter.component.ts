@@ -183,7 +183,7 @@ export class OpAutocompleterComponent<T extends IAutocompleteItem = IAutocomplet
 
   @Input() public dropdownPosition?:DropdownPosition = 'auto';
 
-  @Input() public appendTo?:string;
+  @Input() public appendTo = 'body';
 
   @Input() public closeOnSelect?:boolean = true;
 

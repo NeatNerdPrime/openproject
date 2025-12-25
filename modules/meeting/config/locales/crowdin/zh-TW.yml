@@ -230,6 +230,9 @@ zh-TW:
         summary_series: "'%{title}' 系列會議已被 %{actor}取消。"
         summary: "%{title}' 已被 %{actor}取消。"
         date_time: "排定日期/時間"
+      ended:
+        header_series: "結束：會議系列 '%{title}'"
+        summary_series: "會議系列 '%{title}' 已由 %{actor}結束。"
       updated:
         header: "會議 '%{title}' 已更新"
         summary: "會議 '%{title}' 已由 %{actor}更新"

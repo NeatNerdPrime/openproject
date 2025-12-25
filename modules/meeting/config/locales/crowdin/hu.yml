@@ -235,6 +235,9 @@ hu:
         summary_series: "Meeting series '%{title}' has been cancelled by %{actor}."
         summary: "'%{title}' has been cancelled by %{actor}."
         date_time: "Scheduled date/time"
+      ended:
+        header_series: "Ended: Meeting series '%{title}'"
+        summary_series: "Meeting series '%{title}' has been ended by %{actor}."
       updated:
         header: "A \"%{title}\" megbeszélés frissítve lett"
         summary: "A(z) \"%{title}\" megbeszélést %{actor} frissítette"

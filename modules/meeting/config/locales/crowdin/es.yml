@@ -235,6 +235,9 @@ es:
         summary_series: "%{actor} ha cancelado la serie de reuniones «%{title}»."
         summary: "%{actor} ha cancelado «%{title}»."
         date_time: "Fecha/hora programada"
+      ended:
+        header_series: "Ended: Meeting series '%{title}'"
+        summary_series: "Meeting series '%{title}' has been ended by %{actor}."
       updated:
         header: "La reunión «%{title}» se ha actualizado"
         summary: "%{actor} ha actualizado la reunión «%{title}»"

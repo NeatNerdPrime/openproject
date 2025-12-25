@@ -235,6 +235,9 @@ tr:
         summary_series: "'%{title}' toplantı serisi %{actor} tarafından iptal edilmiştir."
         summary: "'%{title}' %{actor} tarafından iptal edilmiştir."
         date_time: "Planlanan tarih/saat"
+      ended:
+        header_series: "Ended: Meeting series '%{title}'"
+        summary_series: "Meeting series '%{title}' has been ended by %{actor}."
       updated:
         header: "'%{title}' toplantısı güncellendi"
         summary: "'%{title}' toplantısı %{actor} tarafından güncellendi"

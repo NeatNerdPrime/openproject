@@ -10,14 +10,14 @@
     }
     <ul class="advanced-filters--filters">
       <li id="filter_search"
-        class="advanced-filters--filter --without-operator">
+          class="advanced-filters--filter --without-operator">
         <label for="filter-by-text-input"
-          class="advanced-filters--filter-name"
-          [textContent]="text.filter_by_text"
-          [attr.title]="text.filter_by_text">
+               class="advanced-filters--filter-name"
+               [textContent]="text.filter_by_text"
+               [attr.title]="text.filter_by_text">
         </label>
         <div class="advanced-filters--filter-value">
-          <wp-filter-by-text-input (deactivateFilter)="deactivateFilter($event)" />
+          <wp-filter-by-text-input (deactivateFilter)="deactivateFilter($event)"/>
         </div>
       </li>
       <li class="advanced-filters--spacer"></li>
@@ -40,7 +40,7 @@
       <li class="advanced-filters--add-filter">
         <!-- Add filters -->
         <label for="add_filter_select" aria-hidden="true" class="advanced-filters--add-filter-label">
-          <op-icon icon-classes="icon-add icon4" />
+          <op-icon icon-classes="icon-add icon4"/>
           {{ text.label_filter_add }}:
         </label>
         <label for="add_filter_select" class="sr-only">
@@ -49,21 +49,22 @@
           {{ text.close_filter }}
         </label>
         <div class="advanced-filters--add-filter-value">
-          <ng-select #ngSelectComponent
-            [items]="remainingFilters"
-            [clearSearchOnAdd]="true"
-            [multiple]="false"
-            [clearable]="true"
-            [clearOnBackspace]="true"
-            [closeOnSelect]="true"
-            [virtualScroll]="true"
-            [placeholder]="text.please_select"
-            [searchFn]="searchFunction"
-            (open)="onOpen()"
-            (change)="onFilterAdded($event)"
-            id="add_filter_select"
-            bindLabel="name"
-            appendTo="body" />
+          <ng-select
+              #ngSelectComponent
+              [items]="remainingFilters"
+              [clearSearchOnAdd]="true"
+              [multiple]="false"
+              [clearable]="true"
+              [clearOnBackspace]="true"
+              [closeOnSelect]="true"
+              [virtualScroll]="true"
+              [placeholder]="text.please_select"
+              [searchFn]="searchFunction"
+              (open)="onOpen()"
+              (change)="onFilterAdded($event)"
+              id="add_filter_select"
+              bindLabel="name"
+          />
         </div>
       </li>
     </ul>

@@ -82,7 +82,6 @@ See COPYRIGHT and LICENSE files for more details.
                                           filters: [{ name: "user_action", operator: "=", values: ["work_packages/#{@copy ? 'copy' : 'move'}"] }],
                                           inputName: "new_project_id",
                                           model: @target_project,
-                                          appendTo: "body",
                                           hiddenFieldAction: "change->refresh-on-form-changes#triggerReload",
                                           clearable: false
                                         },

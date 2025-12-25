@@ -36,6 +36,7 @@ module Shares
         visually_hide_label: true,
         data: { "shares--user-limit-target": "autocompleter" },
         autocomplete_options: {
+          appendTo: "##{Shares::ShareDialogComponent::DIALOG_ID}",
           component: "opce-user-autocompleter",
           defaultData: false,
           id: "op-share-dialog-invite-autocomplete",

@@ -2,7 +2,7 @@
 
 module Components::Autocompleter
   module NgSelectAutocompleteHelpers
-    def search_autocomplete(element, query:, results_selector: nil, wait_dropdown_open: true, wait_for_fetched_options: true)
+    def search_autocomplete(element, query:, results_selector: "body", wait_dropdown_open: true, wait_for_fetched_options: true)
       SeleniumHubWaiter.wait unless using_cuprite?
       ng_click_autocompleter(element)
 
@@ -36,7 +36,7 @@ module Components::Autocompleter
       target.click
     end
 
-    def ng_find_dropdown(element, results_selector: nil)
+    def ng_find_dropdown(element, results_selector: "body")
       retry_block do
         if results_selector
           results_selector = "#{results_selector} .ng-dropdown-panel" if results_selector == "body"
@@ -54,7 +54,7 @@ module Components::Autocompleter
       end
     end
 
-    def expect_ng_option(element, option, grouping: nil, results_selector: nil, present: true)
+    def expect_ng_option(element, option, grouping: nil, results_selector: "body", present: true)
       within(ng_find_dropdown(element, results_selector:)) do
         if grouping && present
           # Make sure the option is displayed under correct grouping title.
@@ -79,7 +79,7 @@ module Components::Autocompleter
       end
     end
 
-    def expect_no_ng_option(element, option, results_selector: nil)
+    def expect_no_ng_option(element, option, results_selector: "body")
       within(ng_find_dropdown(element, results_selector:)) do
         expect(page).to have_no_css(".ng-option", text: option)
       end
@@ -140,7 +140,7 @@ module Components::Autocompleter
     def select_autocomplete(element,
                             query:,
                             select_text: nil,
-                            results_selector: nil,
+                            results_selector: "body",
                             wait_dropdown_open: true,
                             wait_for_fetched_options: true)
       target_dropdown = search_autocomplete(element,

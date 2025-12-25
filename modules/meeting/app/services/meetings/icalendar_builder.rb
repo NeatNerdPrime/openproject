@@ -122,7 +122,7 @@ module Meetings
       add_virtual_occurences_for_interim_responses(recurring_meeting: recurring_meeting)
     end
 
-    def add_single_recurring_occurrence(scheduled_meeting:) # rubocop:disable Metrics/AbcSize
+    def add_single_recurring_occurrence(scheduled_meeting:, cancelled: false) # rubocop:disable Metrics/AbcSize
       recurring_meeting = scheduled_meeting.recurring_meeting
       meeting = scheduled_meeting.meeting
 
@@ -147,7 +147,7 @@ module Meetings
         e.location = meeting.location.presence
 
         add_attendees(event: e, meeting: meeting)
-        e.status = if scheduled_meeting.cancelled?
+        e.status = if cancelled || scheduled_meeting.cancelled?
                      "CANCELLED"
                    else
                      "CONFIRMED"

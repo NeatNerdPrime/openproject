@@ -235,6 +235,9 @@ sv:
         summary_series: "Mötesserien '%{title}' har avbrutits av %{actor}."
         summary: "'%{title}' har avbrutits av %{actor}."
         date_time: "Schemalagd datum/tid"
+      ended:
+        header_series: "Ended: Meeting series '%{title}'"
+        summary_series: "Meeting series '%{title}' has been ended by %{actor}."
       updated:
         header: "Mötet '%{title}' har uppdaterats"
         summary: "Möte '%{title}' har uppdaterats av %{actor}"

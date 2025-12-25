@@ -17,14 +17,16 @@
       [id]="area.guid"
       [cdkDropListData]="area"
       [cdkDropListConnectedTo]="layout.gridAreaIds">
-      <div class="grid--area-content widget-box"
+      <div
+        class="grid--area-content widget-box"
         cdkDrag
+        attr.data-test-selector="grid-widget-{{area.widget?.identifier}}"
         (cdkDragStarted)="drag.start(area)"
         (cdkDragDropped)="drag.drop()"
         [cdkDragDisabled]="isMobileDevice || !drag.isDraggable">
         <ndc-dynamic [ndcDynamicComponent]="widgetComponent(area)"
-          [ndcDynamicInputs]="widgetComponentInput(area)"
-          [ndcDynamicOutputs]="widgetComponentOutput(area)" />
+                     [ndcDynamicInputs]="widgetComponentInput(area)"
+                     [ndcDynamicOutputs]="widgetComponentOutput(area)"/>
       </div>
       @if (resize.isResizable) {
         <op-resizer

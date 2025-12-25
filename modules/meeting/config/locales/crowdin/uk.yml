@@ -245,6 +245,9 @@ uk:
         summary_series: "Серію нарад «%{title}» скасував(-ла) %{actor}."
         summary: "«%{title}» скасував(-ла) %{actor}."
         date_time: "Заплановані дата/час"
+      ended:
+        header_series: "Ended: Meeting series '%{title}'"
+        summary_series: "Meeting series '%{title}' has been ended by %{actor}."
       updated:
         header: "Нараду «%{title}» оновлено"
         summary: "Нараду «%{title}» оновив(-ла) %{actor}"

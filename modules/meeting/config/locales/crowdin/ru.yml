@@ -245,6 +245,9 @@ ru:
         summary_series: "Серия совещаний '%{title}' была отменена %{actor}."
         summary: "'%{title}' было отменено %{actor}."
         date_time: "Запланированная дата/время"
+      ended:
+        header_series: "Ended: Meeting series '%{title}'"
+        summary_series: "Meeting series '%{title}' has been ended by %{actor}."
       updated:
         header: "Встреча '%{title}' была обновлена"
         summary: "Совещание '%{title}' было обновлено пользователем %{actor}"

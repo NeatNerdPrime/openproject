@@ -191,6 +191,12 @@ const halResourceDefaultConfig:Record<string, HalResourceFactoryConfigInterface>
   Project: {
     cls: ProjectResource,
   },
+  Portfolio: {
+    cls: ProjectResource,
+  },
+  Program: {
+    cls: ProjectResource,
+  },
   Role: {
     cls: RoleResource,
   },

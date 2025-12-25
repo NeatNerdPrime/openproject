@@ -230,6 +230,9 @@ ko:
         summary_series: "'%{title}' 미팅 시리즈를 %{actor} 님이 취소했습니다."
         summary: "'%{title}'을(를) %{actor} 님이 취소했습니다."
         date_time: "스케줄링된 날짜/시간"
+      ended:
+        header_series: "Ended: Meeting series '%{title}'"
+        summary_series: "Meeting series '%{title}' has been ended by %{actor}."
       updated:
         header: "'%{title}' 미팅이 업데이트되었습니다"
         summary: "'%{title}' 미팅을 %{actor} 님이 업데이트했습니다"
