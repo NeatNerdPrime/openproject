@@ -45,7 +45,7 @@ jobs:
       run: |
         cp ./docker/pullpreview/docker-compose.yml ./docker-compose.pullpreview.yml
         cp ./docker/prod/Dockerfile ./Dockerfile
-    - uses: pullpreview/action@v5
+    - uses: pullpreview/action@v6
       with:
         # allows to ssh to the instance using our GitHub ssh key
         # command like: ssh ec2-user@pr-19375-trial-ip-3-127-219-135.my.preview.run
