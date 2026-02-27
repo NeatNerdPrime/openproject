@@ -113,7 +113,7 @@ jobs:
           ./docker/prod/setup/precompile-assets.sh
           # public/assets will be saved as artifact, so temporarily copying config file there as well
           cp config/frontend_assets.manifest.json public/assets/frontend_assets.manifest.json
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           path: public/
           name: public-assets-${{ inputs.tag }}-${{ github.sha }}
@@ -291,7 +291,7 @@ jobs:
           digest="${{ steps.push.outputs.digest }}"
           touch "/tmp/digests/${digest#sha256:}"
       - name: Upload digest
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: digests-${{ inputs.tag }}-${{ matrix.target }}--${{ matrix.digest }}
           path: /tmp/digests/*
@@ -307,7 +307,7 @@ jobs:
       - build
     steps:
       - name: Merge digests
-        uses: actions/upload-artifact/merge@v6
+        uses: actions/upload-artifact/merge@v7
         with:
           pattern: "digests-${{ inputs.tag }}-${{ matrix.target }}--*"
           overwrite: true
