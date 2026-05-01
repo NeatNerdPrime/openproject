@@ -38,7 +38,7 @@ jobs:
     - uses: actions/checkout@v6
     - name: Cache DOCKER
       id: cache_docker
-      uses: runs-on/cache@v4
+      uses: runs-on/cache@v5
       with:
         path: cache/docker
         # Note: no restore keys since whenever the files below change, we want to rebuild the full image from scratch
@@ -47,28 +47,28 @@ jobs:
       if: steps.cache_docker.outputs.cache-hit == 'true'
       run: docker load -i cache/docker/image.tar
     - name: Cache GEM
-      uses: runs-on/cache@v4
+      uses: runs-on/cache@v5
       with:
         path: cache/bundle
         key: gem-trixie-${{ hashFiles('.ruby-version') }}-${{ hashFiles('Gemfile.lock') }}
         restore-keys: |
           gem-trixie-${{ hashFiles('.ruby-version') }}-
     - name: Cache NPM
-      uses: runs-on/cache@v4
+      uses: runs-on/cache@v5
       with:
         path: cache/node
         key: node-${{ hashFiles('package.json', 'frontend/package-lock.json') }}
         restore-keys: |
           node-
     - name: Cache ANGULAR
-      uses: runs-on/cache@v4
+      uses: runs-on/cache@v5
       with:
         path: cache/angular
         key: angular-${{ hashFiles('package.json', 'frontend/package-lock.json') }}
         restore-keys: |
           angular-
     - name: Cache TEST RUNTIME
-      uses: runs-on/cache@v4
+      uses: runs-on/cache@v5
       with:
         path: cache/runtime-logs
         key: runtime-logs-${{ github.head_ref || github.ref }}-${{ github.sha }}

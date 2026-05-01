@@ -85,7 +85,7 @@ jobs:
           echo "✓ docker_tags: ${{ steps.extract_version.outputs.docker_tags }}"
           echo "✓ registry_image: ${{ steps.extract_version.outputs.registry_image }}"
       - name: Cache NPM
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             frontend/node_modules
@@ -93,7 +93,7 @@ jobs:
           key: nodejs-x64-${{ hashFiles('**/package-lock.json') }}
           restore-keys: nodejs-x64-
       - name: Cache angular
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: frontend/.angular
           key: angular-${{ github.ref }}
